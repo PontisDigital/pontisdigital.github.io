@@ -82,6 +82,11 @@ export const NavLinks = styled(LinkScroll)`
 	{
 		border-bottom: 3px solid #01bf71;
 	}
+
+	&:hover
+	{
+		color: #01bf71;
+	}
 `
 
 export const NavButton = styled.nav`
