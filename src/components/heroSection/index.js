@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import {
-	HeroContainer, HeroBg, VantaBg, VantaBG,HeroContent,HeroH1,HeroP,HeroBtnWrapper,ArrowForward,ArrowRight
+	HeroContainer, HeroBg, VantaBg, HeroContent,HeroH1,HeroP,HeroBtnWrapper,ArrowForward,ArrowRight
 } from './heroElements'
 import {Button} from '../buttonElement'
 import NET from "vanta/dist/vanta.net.min";
@@ -43,7 +43,7 @@ const HeroSection = () => {
 					</HeroH1>
 					<HeroP>
 						Sign up for a new account today and receive
-						$5 towards your account
+						$5
 					</HeroP>
 					<HeroBtnWrapper>
 						<Button to="signup"
