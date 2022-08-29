@@ -85,7 +85,7 @@ export const NavLinks = styled(LinkScroll)`
 
 	&:hover
 	{
-		color: #01bf71;
+		color: #6a779b;
 	}
 `
 
@@ -115,7 +115,7 @@ export const NavButtonLink = styled(LinkRouter)`
 	&:hover
 	{
 		transition: all 0.2s ease-in-out;
-		background: #fff;
+		background: #6a779b;
 		color: #010606;
 	}
 `
