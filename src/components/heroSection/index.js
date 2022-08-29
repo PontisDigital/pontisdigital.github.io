@@ -21,7 +21,7 @@ const HeroSection = () => {
                     el: myRef.current,
 					color: '#6a779b',
 					backgroundColor: '#000',
-					points: '20',
+					//points: '20',
 					scaleMobile: '0.3'
                 })
             );
