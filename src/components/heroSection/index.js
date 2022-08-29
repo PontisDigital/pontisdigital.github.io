@@ -12,13 +12,13 @@ const HeroSection = () => {
 
 	// ********************** VANTA EFFECT ********************** 
 	const [vantaEffect, setVantaEffect] = useState(0);
-	const myRef = useRef(null);
+	const vanta_element_ref = useRef(null);
 	useEffect(() =>
 	{
 		if (!vantaEffect) {
             setVantaEffect(
                 NET({
-                    el: myRef.current,
+                    el: vanta_element_ref.current,
 					color: '#6a779b',
 					backgroundColor: '#000',
 					//points: '20',
@@ -35,7 +35,7 @@ const HeroSection = () => {
 		<>
 			<HeroContainer id="home">
 				<HeroBg>
-					<VantaBg ref={myRef}/>
+					<VantaBg ref={vanta_element_ref}/>
 				</HeroBg>
 				<HeroContent>
 					<HeroH1>
