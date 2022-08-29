@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.1f73a932.css","mappings":"AAAA,EAEC,qBAAsB,CAGtB,iCAAqC,CAFrC,QAAS,CACT,SAED,CACA,KAEC,qBACD","sources":["App.css"],"sourcesContent":["*\n{\n\tbox-sizing: border-box;\n\tmargin: 0;\n\tpadding: 0;\n\tfont-family: 'Inconsolata', monospace;\n}\nbody\n{\n\tbackground-color: #000;\n}\n"],"names":[],"sourceRoot":""}
