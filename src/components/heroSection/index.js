@@ -5,6 +5,7 @@ import {
 import {Button} from '../buttonElement'
 import NET from "vanta/dist/vanta.net.min";
 
+//TODO WAITLIST PROMPT
 const HeroSection = () => {
 
 	const [hover,setHover] = useState(false)

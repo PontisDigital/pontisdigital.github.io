@@ -19,8 +19,8 @@ const Home = () => {
 			<HeroSection/>
 			<InfoSection {...homeObjOne}/>
 			<InfoSection {...homeObjTwo}/>
-			{/*<InfoSection {...homeObjThree}/>*/}
 			<Services/>
+			{<InfoSection {...homeObjThree}/>}
 			<Footer/>
 		</>
 	)

@@ -5,7 +5,7 @@ export const homeObjOne =
 	lightText: true,
 	lightTextDesc: true,
 	topLine: 'Rebates',
-	heading: 'Get Rebates on Every Purchase you Make',
+	heading: 'Get Rewards on Every Purchase you Make',
 	description: 'Every time you make a purchase at a participating store, a little man comes over and puts money in your account',
 	buttonLabel: 'Get Started',
 	imgStart: false,
@@ -36,9 +36,9 @@ export const homeObjTwo =
 
 export const homeObjThree = 
 {
-	id: 'services',
-	lightBg: false,
-	lightText: true,
+	id: 'move',
+	lightBg: true,
+	lightText: false,
 	lightTextDesc: true,
 	topLine: 'Move Money',
 	heading: 'A New Way to Send and Receive Payments',
@@ -48,6 +48,6 @@ export const homeObjThree =
 	img: require('../../images/onlineTransfer.svg').default,
 	alt: 'Card',
 	dark: false,
-	primary: true,
+	primary: false,
 	darkText: false
 }

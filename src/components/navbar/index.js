@@ -63,6 +63,15 @@ const Navbar = ({toggle}) => {
 							>Services</NavLinks>
 						</NavItem>
 						<NavItem>
+							<NavLinks to="move"
+								smooth={true}
+								duration={500}
+								spy={true}
+								exact='true'
+								offset{...-80}
+							>Transfer</NavLinks>
+						</NavItem>
+						<NavItem>
 							<NavLinks to="signup">Sign Up</NavLinks>
 						</NavItem>
 					</NavMenu>
