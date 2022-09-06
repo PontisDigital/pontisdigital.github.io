@@ -3,7 +3,7 @@ import {
 	HeroContainer, HeroBg, VantaBg, HeroContent,HeroH1,HeroP,HeroBtnWrapper,ArrowForward,ArrowRight
 } from './heroElements'
 import {Button} from '../buttonElement'
-import NET from "vanta/dist/vanta.net.min";
+import WAVES from "vanta/dist/vanta.waves.min";
 
 //TODO WAITLIST PROMPT
 const HeroSection = () => {
@@ -18,10 +18,9 @@ const HeroSection = () => {
 	{
 		if (!vantaEffect) {
             setVantaEffect(
-                NET({
+                WAVES({
                     el: vanta_element_ref.current,
-					color: '#6a779b',
-					backgroundColor: '#000',
+					color: '#000048',
 					//points: '20',
 					scaleMobile: '0.3'
                 })
