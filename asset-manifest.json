@@ -1,17 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.1f73a932.css",
-    "main.js": "/static/js/main.ec2ff0cb.js",
+    "main.js": "/static/js/main.e8de558d.js",
+    "static/media/darkerMoney.mp4": "/static/media/darkerMoney.a1d891299ac736aa6d0c.mp4",
     "static/media/piggyBank.svg": "/static/media/piggyBank.b2234ef2ea13a3571b7e6bffd1ff96ec.svg",
     "static/media/holdingCard.svg": "/static/media/holdingCard.2bd1ffedc0bff40539d0b904bf1a2ff1.svg",
     "static/media/mobilePayment.svg": "/static/media/mobilePayment.de3f2f5bd3bc255e7a0ab6dae9c586c3.svg",
     "static/media/onlineTransfer.svg": "/static/media/onlineTransfer.4aaed6d863abc51f8da5a4134146235c.svg",
     "index.html": "/index.html",
     "main.1f73a932.css.map": "/static/css/main.1f73a932.css.map",
-    "main.ec2ff0cb.js.map": "/static/js/main.ec2ff0cb.js.map"
+    "main.e8de558d.js.map": "/static/js/main.e8de558d.js.map"
   },
   "entrypoints": [
     "static/css/main.1f73a932.css",
-    "static/js/main.ec2ff0cb.js"
+    "static/js/main.e8de558d.js"
   ]
 }
