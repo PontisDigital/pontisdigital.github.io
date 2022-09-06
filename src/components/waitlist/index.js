@@ -114,7 +114,7 @@ const Waitlist = props => {
   };
 
   const handleStreetChange = (event) => {
-    setFirstName(event.target.value);
+    setStreetAddress(event.target.value);
     if (
       event.target.value.indexOf("streetAddress=") !== -1 ||
       event.target.value === ""
@@ -125,7 +125,7 @@ const Waitlist = props => {
     }
   };
   const handleCityChange = (event) => {
-    setFirstName(event.target.value);
+    setCity(event.target.value);
     if (
       event.target.value.indexOf("city=") !== -1 ||
       event.target.value === ""
@@ -136,7 +136,7 @@ const Waitlist = props => {
     }
   };
   const handleStateChange = (event) => {
-    setFirstName(event.target.value);
+    setState(event.target.value);
     if (
       event.target.value.indexOf("state=") !== -1 ||
       event.target.value === ""
@@ -146,7 +146,7 @@ const Waitlist = props => {
       setStateStatus(1);
     }
   };  const handleZipChange = (event) => {
-    setFirstName(event.target.value);
+    setZipCode(event.target.value);
     if (
       event.target.value.indexOf("zipCode=") !== -1 ||
       event.target.value === ""
@@ -185,7 +185,7 @@ const Waitlist = props => {
 
     console.log("button pressed");
     event.preventDefault();
-	let post = new JSON();
+	let post = new Map();
 	post['firstName'] = firstName;
 	post['lastName'] = lastName;
 	post['phone'] = phone;
@@ -377,16 +377,6 @@ const Waitlist = props => {
             <input
               type="submit"
               value="Sign Up"
-              disabled={
-                emailStatus === 1 &&
-                firstNameStatus === 1 &&
-                lastNameStatus === 1 &&
-                phoneStatus === 1 &&
-                passwordStatus === 1 &&
-                referralStatus === 1 
-                  ? false
-                  : true
-              }
             />
           </form>
       </div>
