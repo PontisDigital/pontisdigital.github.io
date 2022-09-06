@@ -1,9 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import {
-	HeroContainer, HeroBg, VantaBg, HeroContent,HeroH1,HeroP,HeroBtnWrapper,ArrowForward,ArrowRight
+	HeroContainer, HeroBg, VideoBg, HeroContent,HeroH1,HeroP,HeroBtnWrapper,ArrowForward,ArrowRight, BlackShade
 } from './heroElements'
 import {Button} from '../buttonElement'
-import WAVES from "vanta/dist/vanta.waves.min";
+import Particles from "react-tsparticles";
+import {loadFull} from "tsparticles";
+import { useCallback } from "react";
+
+import Video from '../../videos/darkerMoney.mp4'
 
 //TODO WAITLIST PROMPT
 const HeroSection = () => {
@@ -11,6 +15,7 @@ const HeroSection = () => {
 	const [hover,setHover] = useState(false)
 	const onHover = () => {setHover(!hover)}
 
+	/*
 	// ********************** VANTA EFFECT ********************** 
 	const [vantaEffect, setVantaEffect] = useState(0);
 	const vanta_element_ref = useRef(null);
@@ -31,11 +36,24 @@ const HeroSection = () => {
         };
     }, [vantaEffect]);
 	// ********************** END VANTA EFFECT ********************** 
+	*/
+
+	const particlesInit = useCallback(async (engine) => {
+        console.log(engine);
+        // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+        // this loads the tsparticles package bundle, it's the easiest method for getting everything ready starting from v2 you can add only the features you need reducing the bundle size
+        await loadFull(engine);
+    }, []);
+
+    const particlesLoaded = useCallback(async (container) => {
+        await console.log(container);
+    }, []);
+
 	return(
 		<>
 			<HeroContainer id="home">
 				<HeroBg>
-					<VantaBg ref={vanta_element_ref}/>
+					<VideoBg autoPlay muted src={Video} type='video/mp4'/>
 				</HeroBg>
 				<HeroContent>
 					<HeroH1>
