@@ -3,9 +3,10 @@ import Navbar from '../components/navbar';
 import { useState } from 'react';
 import HeroSection from '../components/heroSection';
 import InfoSection from '../components/infoSection';
-import {homeObjOne,homeObjTwo,homeObjThree} from '../components/infoSection/Data';
+import {homeObjOne,homeObjTwo} from '../components/infoSection/Data';
 import Services from '../components/services';
 import Footer from '../components/footer';
+import Waitlist from '../components/waitlist';
 
 const Home = () => {
 	const [isOpen,setIsOpen] = useState(false)
@@ -20,7 +21,7 @@ const Home = () => {
 			<InfoSection {...homeObjOne}/>
 			<InfoSection {...homeObjTwo}/>
 			<Services/>
-			{<InfoSection {...homeObjThree}/>}
+			<Waitlist/>
 			<Footer/>
 		</>
 	)

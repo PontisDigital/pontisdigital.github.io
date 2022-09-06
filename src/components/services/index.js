@@ -1,40 +1,40 @@
-import Icon1 from "../../images/holdingCard.svg"
-import Icon2 from "../../images/mobilePayment.svg"
-import Icon3 from "../../images/onlineTransfer.svg"
+import Icon1 from "../../images/shopping.svg"
+import Icon2 from "../../images/preparedForRainyday.svg"
+import Icon3 from "../../images/access.svg"
 import { ServicesP, ServicesContainer, ServicesH1, ServicesWrapper, ServicesIcon, ServicesH2, ServicesCard } from "./servicesElements";
 const Services = () => {
 	return (
 		<>
-			<ServicesContainer id="services">
+			<ServicesContainer id="nutshell">
 				<ServicesH1>
-					Our Services
+					In a Nutshell
 				</ServicesH1>
 				<ServicesWrapper>
 					<ServicesCard>
 						<ServicesIcon src={Icon1}/>
 						<ServicesH2>
-							Reduce Expenses
+							Earn More
 						</ServicesH2>
 						<ServicesP>
-							We Help Reduce Your Fees and Increase your overall revenue
+							Shop like you already do and earn hundreds.
 						</ServicesP>
 					</ServicesCard>
 					<ServicesCard>
 						<ServicesIcon src={Icon2}/>
 						<ServicesH2>
-							Virtual Offices
+							Stress Less
 						</ServicesH2>
 						<ServicesP>
-							You can access the platform anywhere online in the world
+							With us, you’ll always be prepared for a rainy day.
 						</ServicesP>
 					</ServicesCard>
 					<ServicesCard>
 						<ServicesIcon src={Icon3}/>
 						<ServicesH2>
-							Premium Banking
+							Access Always
 						</ServicesH2>
 						<ServicesP>
-							Unlock our special membership card that returns 5% cashback
+							Get paid in real time and access your balance anytime, anywhere.
 						</ServicesP>
 					</ServicesCard>
 				</ServicesWrapper>

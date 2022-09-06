@@ -1,12 +1,12 @@
 export const homeObjOne = 
 {
-	id: 'about',
+	id: 'earn',
 	lightBg: false,
 	lightText: true,
 	lightTextDesc: true,
-	topLine: 'Rebates',
-	heading: 'Get Rewards on Every Purchase you Make',
-	description: 'Every time you make a purchase at a participating store, a little man comes over and puts money in your account',
+	topLine: 'Earn',
+	heading: 'Watch it Pile Up',
+	description: 'find stores near you on the app, and start getting paid for your shopping routine today',
 	buttonLabel: 'Get Started',
 	imgStart: false,
 	img: require('../../images/piggyBank.svg').default,
@@ -18,13 +18,13 @@ export const homeObjOne =
 
 export const homeObjTwo = 
 {
-	id: 'discover',
+	id: 'access',
 	lightBg: true,
 	lightText: false,
 	lightTextDesc: false,
-	topLine: 'Spend anywhere',
-	heading: 'Unleash new Spending Potential',
-	description: 'With a virtual debit card you\'re able to spend your earned rebates anywhere',
+	topLine: 'Unrestricted Access',
+	heading: 'Spend your Earnings Anywhere, Anyhow',
+	description: 'You can let your balance grow, transfer earnings to other platforms—like ATH Movil or a bank account—or spend anywhere directly from your account with a free virtual debit card. The choice is yours!',
 	buttonLabel: 'Get Started',
 	imgStart: false,
 	img: require('../../images/mobilePayment.svg').default,

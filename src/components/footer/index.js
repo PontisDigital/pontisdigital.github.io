@@ -14,99 +14,13 @@ const Footer = () => {
 		<>
 			<FooterContainer>
 				<FooterWrap>
-					<FooterLinksContainer>
-						<FooterLinksWrapper>
-							<FooterLinkItems>
-								<FooterLinkTitle>
-									About Us
-								</FooterLinkTitle>
-								<FooterLink to="/login">
-									How it works
-								</FooterLink>
-								<FooterLink to="/login">
-									Testimonials
-								</FooterLink>
-								<FooterLink to="/login">
-									Careers
-								</FooterLink>
-								<FooterLink to="/login">
-									Investors
-								</FooterLink>
-								<FooterLink to="/login">
-									Terms of Service
-								</FooterLink>
-							</FooterLinkItems>
-							<FooterLinkItems>
-								<FooterLinkTitle>
-									About Us
-								</FooterLinkTitle>
-								<FooterLink to="/login">
-									How it works
-								</FooterLink>
-								<FooterLink to="/login">
-									Testimonials
-								</FooterLink>
-								<FooterLink to="/login">
-									Careers
-								</FooterLink>
-								<FooterLink to="/login">
-									Investors
-								</FooterLink>
-								<FooterLink to="/login">
-									Terms of Service
-								</FooterLink>
-							</FooterLinkItems>
-						</FooterLinksWrapper>
-						<FooterLinksWrapper>
-							<FooterLinkItems>
-								<FooterLinkTitle>
-									About Us
-								</FooterLinkTitle>
-								<FooterLink to="/login">
-									How it works
-								</FooterLink>
-								<FooterLink to="/login">
-									Testimonials
-								</FooterLink>
-								<FooterLink to="/login">
-									Careers
-								</FooterLink>
-								<FooterLink to="/login">
-									Investors
-								</FooterLink>
-								<FooterLink to="/login">
-									Terms of Service
-								</FooterLink>
-							</FooterLinkItems>
-							<FooterLinkItems>
-								<FooterLinkTitle>
-									About Us
-								</FooterLinkTitle>
-								<FooterLink to="/login">
-									How it works
-								</FooterLink>
-								<FooterLink to="/login">
-									Testimonials
-								</FooterLink>
-								<FooterLink to="/login">
-									Careers
-								</FooterLink>
-								<FooterLink to="/login">
-									Investors
-								</FooterLink>
-								<FooterLink to="/login">
-									Terms of Service
-								</FooterLink>
-							</FooterLinkItems>
-						</FooterLinksWrapper>
-					</FooterLinksContainer>
 					<SocialMedia>
 						<SocialMediaWrap>
 							<SocialLogo to="/" onClick={toggleHome}>
 								rainyday
 							</SocialLogo>
 							<WebsiteRights>
-								© Pontis Digital Inc. {new Date().getFullYear()+" "}
+								© Pontis Digital Corporation. {new Date().getFullYear()+" "}
 								All rights reserved.
 							</WebsiteRights>
 							<SocialIcons>

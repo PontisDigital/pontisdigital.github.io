@@ -57,11 +57,10 @@ const HeroSection = () => {
 				</HeroBg>
 				<HeroContent>
 					<HeroH1>
-						Easing the Burden of Tomorrow
+						Get Paid Every Time You Shop
 					</HeroH1>
 					<HeroP>
-						Sign up for a new account today and receive
-						$5
+						Money is added to your account every time you shop with rainyday. No catch—simply download the app, shop like you normally do, and watch as your balance grows!
 					</HeroP>
 					<HeroBtnWrapper>
 						<Button to="signup"
@@ -69,7 +68,7 @@ const HeroSection = () => {
 							primary='true'
 							dark='true'
 							>
-							Get Started {hover ? <ArrowForward /> : <ArrowRight />}
+							Join today and get $5 automatically {hover ? <ArrowForward /> : <ArrowRight />}
 						</Button>
 					</HeroBtnWrapper>
 				</HeroContent>

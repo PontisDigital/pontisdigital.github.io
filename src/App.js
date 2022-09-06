@@ -38,6 +38,7 @@ SuperTokens.init({
 		timeout: 1000,
 		headers: {'Content-Type': 'application/json'}
 	})
+	Session.addAxiosInterceptors(axiosInstance);
 
   return (
 	  <SuperTokensWrapper>
