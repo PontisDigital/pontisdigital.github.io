@@ -8,16 +8,16 @@ const Sidebar = ({isOpen, toggle}) => {
 			</Icon>
 			<SidebarWrapper>
 				<SidebarMenu>
-					<SidebarLink to="about" onClick={toggle}>
-						About
+					<SidebarLink to="earn" onClick={toggle}>
+						Earn
 					</SidebarLink>
-					<SidebarLink to="discover" onClick={toggle}>
-						Discover
+					<SidebarLink to="access" onClick={toggle}>
+						Access
 					</SidebarLink>
-					<SidebarLink to="services" onClick={toggle}>
-						Services
+					<SidebarLink to="nutshell" onClick={toggle}>
+						In a Nutshell
 					</SidebarLink>
-					<SidebarLink to="signup" onClick={toggle}>
+					<SidebarLink to="waitlist" onClick={toggle}>
 						Sign Up
 					</SidebarLink>
 				</SidebarMenu>
