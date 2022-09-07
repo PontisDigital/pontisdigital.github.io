@@ -68,13 +68,19 @@ const Navbar = ({toggle}) => {
 								duration={500}
 								spy={true}
 								exact='true'
-								offset={-80}
+								offset={-100}
 							>Sign Up</NavLinks>
 						</NavItem>
 					</NavMenu>
 					<NavButton>
-						<NavButtonLink to="/login">
-							Log In
+						<NavButtonLink to="waitlist"
+								smooth={true}
+								duration={500}
+								spy={true}
+								exact='true'
+								offset={-100}
+						>
+							Join Now
 						</NavButtonLink>
 					</NavButton>
 				</NavbarContainer>

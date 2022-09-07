@@ -100,7 +100,7 @@ export const NavButton = styled.nav`
 	}
 `
 
-export const NavButtonLink = styled(LinkRouter)`
+export const NavButtonLink = styled(LinkScroll)`
 	border-radius: 50px;
 	background: #061c58;
 	white-space: nowrap;
