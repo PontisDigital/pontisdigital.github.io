@@ -60,7 +60,7 @@ const Navbar = ({toggle}) => {
 								spy={true}
 								exact='true'
 								offset{...-80}
-							>Nutshell</NavLinks>
+							>In a Nutshell</NavLinks>
 						</NavItem>
 						<NavItem>
 							<NavLinks to="waitlist"

@@ -263,12 +263,12 @@ const Waitlist = props => {
 				  <input
 					type="text"
 					placeholder="John"
-					onBlur={handleFirstNameChange}
+					onInput={handleFirstNameChange}
 				  />
 				</div>
 				<div className="waitlist-input-half">
 				  <p className="waitlist-input-text">Your Last Name</p>
-				  {firstNameStatus === 0 && (
+				  {lastName === 0 && (
 					<p className="waitlist-input-error">
 					  There is an error with the name you entered.
 					</p>
@@ -276,7 +276,7 @@ const Waitlist = props => {
 				  <input
 					type="text"
 					placeholder="Doe"
-					onBlur={handleLastNameChange}
+					onInput={handleLastNameChange}
 				  />
 				</div>
 			</div>
@@ -291,7 +291,7 @@ const Waitlist = props => {
 				  <input
 					type="tel"
 					placeholder="123-456-7890"
-					onBlur={handlePhoneChange}
+					onInput={handlePhoneChange}
 				  />
 				</div>
 				<div className="waitlist-input-half">
@@ -304,7 +304,7 @@ const Waitlist = props => {
 				  <input
 					type="email"
 					placeholder="johndoe@gmail.com"
-					onBlur={handleEmailChange}
+					onInput={handleEmailChange}
 				  />
 				</div>
 			</div>
@@ -319,49 +319,74 @@ const Waitlist = props => {
               <input
                 type="password"
                 placeholder="Enter password..."
-                onBlur={handlePasswordChange}
+                onInput={handlePasswordChange}
               />
             </div>
               <div className="waitlist-input waitlist-input-half">
                 <p className="waitlist-input-text">Your Birthday</p>
+				{birthdayStatus === 0 && (
+                <p className="waitlist-input-error">
+                  There is an error with the password you entered.
+                </p>
+              )}
                 <input
 					type="date"
 					placeholder="Enter birthday"
-					onBlur={handleBirthdayChange}
+					onInput={handleBirthdayChange}
 				/>
               </div>
             </div>
             <div className="waitlist-input">
               <p className="waitlist-input-text">Street Address</p>
+              {streetAddressStatus === 0 && (
+                <p className="waitlist-input-error">
+                  There is an error with the password you entered.
+                </p>
+              )}
               <input
                 type="text"
                 placeholder="Av. Madre Rivera"
-                onBlur={handleStreetChange}
+                onInput={handleStreetChange}
               />
             </div>
             <div className="waitlist-input-half-container">
 				<div className="waitlist-input-half">
 				  <p className="waitlist-input-text">City</p>
+              {cityStatus === 0 && (
+                <p className="waitlist-input-error">
+                  There is an error with the password you entered.
+                </p>
+              )}
 				  <input
 					type="text"
 					placeholder="Humacao"
-					onBlur={handleCityChange}
+					onInput={handleCityChange}
 				  />
 				</div>
 				<div className="waitlist-input-half">
 				  <p className="waitlist-input-text">State</p>
+              {stateStatus === 0 && (
+                <p className="waitlist-input-error">
+                  There is an error with the password you entered.
+                </p>
+              )}
 				  <input
 					type="text"
 					placeholder="PR"
-					onBlur={handleStateChange}
+					onInput={handleStateChange}
 				  />
 				</div>
 				<div className="waitlist-input-half">
 				  <p className="waitlist-input-text">ZIP Code</p>
+              {zipCodeStatus === 0 && (
+                <p className="waitlist-input-error">
+                  There is an error with the password you entered.
+                </p>
+              )}
 				  <input
 					type="text"
 					placeholder="00791"
-					onBlur={handleZipChange}
+					onInput={handleZipChange}
 				  />
 				</div>
 			</div>
@@ -370,7 +395,7 @@ const Waitlist = props => {
               <input
                 type="text"
                 placeholder="AB1234"
-                onBlur={handleReferralChange}
+                onInput={handleReferralChange}
                 value={props.refCode}
               />
             </div>
