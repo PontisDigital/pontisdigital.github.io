@@ -22,6 +22,7 @@ export const HeroBg = styled.div`
 	overflow: hidden;
 	background: rgb(2,0,36);
 	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(6,28,88,1) 50%, rgba(0,189,255,1) 100%);
+	z-index: -5;
 `
 export const VideoBg = styled.video`
 	width: 100%;
@@ -29,6 +30,23 @@ export const VideoBg = styled.video`
 	-o-object-fit: cover;
 	object-fit: cover;
 	background: #232a34;
+`
+export const HeroImage = styled.img`
+	max-width: 80%;
+	hegiht: auto;
+	z-index: -2;
+
+	@media screen and (max-width: 768px)
+	{
+		display: none;
+		max-width: 100%;
+		position: absolute;
+		top: -200px;
+		left: -45px;
+	}
+`
+export const HeroFlex = styled.div`
+	display: flex;
 `
 
 export const VantaBg = styled.div`
@@ -50,9 +68,16 @@ export const HeroContent = styled.div`
 	max-width: 1200px;
 	position: absolute;
 	padding: 8px 24px;
-	display: flex;
-	flex-direction: column;
 	align-items: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px;
+
+	@media screen and (max-width: 768px)
+	{
+		display: block;
+	}
+
 `
 
 export const HeroH1 = styled.h1`

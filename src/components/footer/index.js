@@ -2,7 +2,7 @@ import {
 	FooterContainer, FooterWrap, FooterLinksContainer, FooterLinkItems, FooterLinkTitle, FooterLink, FooterLinksWrapper,
 	SocialMedia,SocialMediaWrap,SocialLogo,WebsiteRights,SocialIcons,SocialIconLink
 } from "./footerElements"
-import {FaFacebook, FaInstagram, FaYoutube, FaTwitter, FaLinkedin} from 'react-icons/fa'
+import {FaFacebook, FaInstagram, FaTwitter, FaLinkedin} from 'react-icons/fa'
 import {animateScroll as scroll} from 'react-scroll'
 const Footer = () => {
 
@@ -25,28 +25,21 @@ const Footer = () => {
 							</WebsiteRights>
 							<SocialIcons>
 								<SocialIconLink
-									href="/"
+									href="https://www.facebook.com/profile.php?id=100085597803454"
 									target="_blank"
 									aria-label="Facebook"
 								>
 									<FaFacebook/>
 								</SocialIconLink>
 								<SocialIconLink
-									href="/"
+									href="https://www.instagram.com/rainyday_deals/"
 									target="_blank"
 									aria-label="Instagram"
 								>
 									<FaInstagram/>
 								</SocialIconLink>
 								<SocialIconLink
-									href="/"
-									target="_blank"
-									aria-label="YouTube"
-								>
-									<FaYoutube/>
-								</SocialIconLink>
-								<SocialIconLink
-									href="/"
+									href="https://twitter.com/rainyday_deals"
 									target="_blank"
 									aria-label="Twitter"
 								>

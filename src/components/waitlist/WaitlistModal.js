@@ -18,32 +18,31 @@ const WaitlistModal = (props) => {
   //status = 1: Submitted
   //status = 2: Complete
   //status = 3: Error
-  const url = "https://pontis.digital?rc=" + props.code;
+  const url = "https://rainyday.deals?rc=" + props.code;
   const message =
-    "I can spend my cash online with Access, even without a bank account. You can, too. Sign up using this link, and get 100,000 IDR every time you share it with a friend!";
+    "I get money every time I shop with rainyday. You can, too. Sign-up using this link and get $5 dollars to start. You can also get $3 to share with your friends!";
   return (
     <div className="waitlist-modal">
       {props.status === 1 && (
         <div className="waitlist-modal-inner">
           <h1 className="waitlist-modal-header">Submitting your request...</h1>
-          <RingLoader size={100} color={"#83A7BC"} loading={true} />
+          <RingLoader size={100} color={"#061c58"} loading={true} />
         </div>
       )}
       {props.status === 2 && (
         <div className="waitlist-modal-inner">
-          <h1 className="waitlist-modal-header">Complete!</h1>
+          <h1 className="waitlist-modal-header">Success!</h1>
           <p className="waitlist-modal-text">
-            You have successfully registered for the waitlist! You will receive
-            a message shortly with more detail. For now,{" "}
-            <strong>share the referral code below and get IDR 100,000</strong>{" "}
-            at launch for each person that signs up with it.
+            With priority access at launch, you can start earning first. For now,{" "}
+            <strong>share the code below and earn $3 </strong>{" "}
+			every time someone uses it at sign-up!
           </p>
           <div className="waitlist-modal-referral-container">
             <h3 className="waitlist-modal-referral">{props.code}</h3>
             <button
               className="waitlist-modal-copy-btn"
               onClick={() => {
-                navigator.clipboard.writeText(props.code);
+				  navigator.clipboard.writeText(message + 'https://rainyday.deals?rc='+ props.code);
               }}>
               COPY
             </button>
@@ -53,14 +52,14 @@ const WaitlistModal = (props) => {
               className="waitlist-modal-share-item"
               url={url}
               quote={message}
-              hashtag="#Access">
+              hashtag="#Rainyday">
               <FacebookIcon size={50} round={true} />
             </FacebookShareButton>
             <TwitterShareButton
               className="waitlist-modal-share-item"
               url={url}
               title={message}
-              hashtags={["Access", "cash"]}>
+              hashtags={["Rainyday", "Money"]}>
               <TwitterIcon size={50} round={true} />
             </TwitterShareButton>
             <WhatsappShareButton
@@ -79,7 +78,7 @@ const WaitlistModal = (props) => {
               className="waitlist-modal-share-item"
               url={url}
               body={message}
-              subject="Access by Pontis Waitlist">
+              subject="Rainyday by Pontis Waitlist">
               <EmailIcon size={50} round={true} />
             </EmailShareButton>
           </div>

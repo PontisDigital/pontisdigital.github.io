@@ -40,7 +40,7 @@ const Waitlist = props => {
     console.log(event.target.value);
     setEmail(event.target.value);
     console.log("Length", event.target.value.length);
-    if (event.target.value.length == 0) {
+    if (event.target.value.length === 0) {
       setEmailStatus(0);
     } else if (
       event.target.value.indexOf("@") === -1 ||
@@ -109,8 +109,7 @@ const Waitlist = props => {
 	let todayDate = new Date();
 	let timeDiff = Math.abs(todayDate.getTime() - bday.getTime());
 	let diffyears = Math.ceil(timeDiff / (1000 * 3600 * 24)/365);
-	setBirthdayStatus(1);
-	//setBirthdayStatus(diffyears > 18);
+	setBirthdayStatus(diffyears > 18);
   };
 
   const handleStreetChange = (event) => {
@@ -210,17 +209,17 @@ const Waitlist = props => {
       })
       .catch(function (error) {
         console.log(error.response);
-        if (error.response.data == "DUPLICATE_PHONE") {
+        if (error.response.data === "DUPLICATE_PHONE") {
           setModalError(
             "You're already signed up for the waitlist using this phone number!"
           );
           setModal(3);
-        } else if (error.response.data == "DUPLICATE_EMAIL") {
+        } else if (error.response.data === "DUPLICATE_EMAIL") {
           setModalError(
             "You've already registered with this email.  Please try again."
           );
           setModal(3);
-        } else if (error.response.data == "INVALID_PHONE") {
+        } else if (error.response.data === "INVALID_PHONE") {
           setModalError(
             "Please enter a valid phone number.  Make sure you've added the proper international code before your number (+62)."
           );
