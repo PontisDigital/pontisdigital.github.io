@@ -18,7 +18,7 @@ const InfoSection = ({id,lightBg,imgStart,topLine,heading,lightText,darkText,des
 									{description}
 								</Subtitle>
 								<ButtonWrap>
-									<Button to="home" primary={primary}
+									<Button to="waitlist" primary={primary}
 										dark={dark}
 										smooth={true}
 										duration={500}

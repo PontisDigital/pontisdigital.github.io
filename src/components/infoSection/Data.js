@@ -23,7 +23,7 @@ export const homeObjTwo =
 	lightText: false,
 	lightTextDesc: false,
 	topLine: 'Unrestricted Access',
-	heading: 'Spend your Earnings Anywhere, Anyhow',
+	heading: 'Spend your Earnings Anyway, Anywhere',
 	description: 'You can let your balance grow, transfer earnings to other platforms—like ATH Movil or a bank account—or spend anywhere directly from your account with a free virtual debit card. The choice is yours!',
 	buttonLabel: 'Get Started',
 	imgStart: false,

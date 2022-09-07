@@ -1,7 +1,7 @@
 {
   "name": "rainyday-react-site",
   "version": "0.1.0",
-  "homepage": "https://pontisdigital.github.io/",
+  "homepage": "https://rainyday.deals/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

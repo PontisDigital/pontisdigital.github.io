@@ -245,9 +245,9 @@ const Waitlist = props => {
         />
       )}
       <div className="container">
-        <h1 className="waitlist-title">Interested in priority Access?</h1>
+        <h1 className="waitlist-title">Join now and get $5 for free</h1>
         <h3 className="waitlist-subtitle">
-          Join the waitlist below for monthly updates and access at launch.
+			Share your referral code and get $3 everytime a friend joins
         </h3>
           <form
             className="waitlist-form"
@@ -340,7 +340,7 @@ const Waitlist = props => {
               <p className="waitlist-input-text">Street Address</p>
               {streetAddressStatus === 0 && (
                 <p className="waitlist-input-error">
-                  There is an error with the password you entered.
+                  There is an error with the address you entered.
                 </p>
               )}
               <input
@@ -354,7 +354,7 @@ const Waitlist = props => {
 				  <p className="waitlist-input-text">City</p>
               {cityStatus === 0 && (
                 <p className="waitlist-input-error">
-                  There is an error with the password you entered.
+					Required
                 </p>
               )}
 				  <input
@@ -364,10 +364,10 @@ const Waitlist = props => {
 				  />
 				</div>
 				<div className="waitlist-input-half">
-				  <p className="waitlist-input-text">State</p>
+				  <p className="waitlist-input-text">State/Territory</p>
               {stateStatus === 0 && (
                 <p className="waitlist-input-error">
-                  There is an error with the password you entered.
+					Required
                 </p>
               )}
 				  <input
@@ -380,7 +380,7 @@ const Waitlist = props => {
 				  <p className="waitlist-input-text">ZIP Code</p>
               {zipCodeStatus === 0 && (
                 <p className="waitlist-input-error">
-                  There is an error with the password you entered.
+					Required
                 </p>
               )}
 				  <input
