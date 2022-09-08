@@ -1,5 +1,9 @@
 import { SidebarContainer, Icon, CloseIcon, SidebarRoute,SidebarWrapper,SidebarMenu,SidebarLink, SideButtonWrap} from "./sidebarElements"
+
+import LanguageContext from '../../LanguageContext';
+import { useContext } from 'react';
 const Sidebar = ({isOpen, toggle}) => {
+	const {lang} = useContext(LanguageContext);
 	return(
 		<>
 		<SidebarContainer isOpen={isOpen} onClick={toggle}>
@@ -9,21 +13,21 @@ const Sidebar = ({isOpen, toggle}) => {
 			<SidebarWrapper>
 				<SidebarMenu>
 					<SidebarLink to="earn" onClick={toggle}>
-						Earn
+					{lang==='en' ? 'Earn' : 'Ganar'}
 					</SidebarLink>
 					<SidebarLink to="access" onClick={toggle}>
-						Access
+					{lang==='en' ? 'Access' : 'Acceso'}
 					</SidebarLink>
 					<SidebarLink to="nutshell" onClick={toggle}>
-						In a Nutshell
+					{lang==='en' ? 'In a Nutshell' : 'En una Palabra'}
 					</SidebarLink>
 					<SidebarLink to="waitlist" onClick={toggle}>
-						Sign Up
+					{lang==='en' ? 'Sign Up' : 'Inscribirse'}
 					</SidebarLink>
 				</SidebarMenu>
 				<SideButtonWrap>
-					<SidebarRoute to="login">
-						Log In
+					<SidebarRoute to="waitlist" onClick={toggle}>
+						Sign Up
 					</SidebarRoute>
 				</SideButtonWrap>
 			</SidebarWrapper>
