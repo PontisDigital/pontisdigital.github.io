@@ -2,7 +2,7 @@ import { useState } from "react";
 import {
 	HeroContainer, HeroFlex, HeroBg, HeroImage, HeroContent,HeroH1,HeroP,HeroBtnWrapper,ArrowForward,ArrowRight, BlackShade
 } from './heroElements'
-import {Button} from '../buttonElement'
+import {Button,MobileOnlyButton} from '../buttonElement'
 import Phone from '../../images/phone.png'
 
 import LanguageContext from '../../LanguageContext';
@@ -10,17 +10,31 @@ import { useContext } from 'react';
 
 const HeroSection = () => {
 
-	const [hover,setHover] = useState(false)
-	const onHover = () => {setHover(!hover)}
+	const [hoverLang,setHoverLang] = useState(false)
+	const [hoverStart,setHoverStart] = useState(false)
+	const onHoverLang = () => {setHoverLang(!hoverLang)}
+	const onHoverStart = () => {setHoverStart(!hoverStart)}
 
-	const {lang} = useContext(LanguageContext);
+	const {lang,toggleLang} = useContext(LanguageContext);
 
 	return(
 		<>
 			<HeroContainer id="home">
 				<HeroBg>
 				</HeroBg>
-				<HeroContent>
+					<HeroBtnWrapper>
+						<MobileOnlyButton
+							onMouseEnter={onHoverLang} onMouseLeave={onHoverLang}
+							primary='true'
+							dark='true'
+							onClick={toggleLang}
+							>
+							{lang==='en' ? 'Ver En Español' : 'View In English'}
+							{hoverLang ? <ArrowForward /> : <ArrowRight />}
+						</MobileOnlyButton>
+					</HeroBtnWrapper>
+					<HeroContent>
+
 					<div>
 						<HeroH1>
 							{lang==='en' ? 'Get Paid Every Time You Shop' : 'Cobra Cada vez que Compras'}
@@ -33,7 +47,7 @@ const HeroSection = () => {
 						</HeroP>
 						<HeroBtnWrapper>
 							<Button to="waitlist"
-								onMouseEnter={onHover} onMouseLeave={onHover}
+								onMouseEnter={onHoverStart} onMouseLeave={onHoverStart}
 								primary='true'
 								dark='true'
 								smooth={true}
@@ -42,7 +56,7 @@ const HeroSection = () => {
 								offset={-80}
 								>
 								{lang==='en' ? 'Join today' : 'Únete hoy'}
-								{hover ? <ArrowForward /> : <ArrowRight />}
+								{hoverStart ? <ArrowForward /> : <ArrowRight />}
 							</Button>
 						</HeroBtnWrapper>
 					</div>
