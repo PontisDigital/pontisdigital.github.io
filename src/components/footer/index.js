@@ -4,11 +4,16 @@ import {
 } from "./footerElements"
 import {FaFacebook, FaInstagram, FaTwitter, FaLinkedin} from 'react-icons/fa'
 import {animateScroll as scroll} from 'react-scroll'
+
+import LanguageContext from '../../LanguageContext';
+import { useContext } from 'react';
 const Footer = () => {
 
 	const toggleHome = () => {
 		scroll.scrollToTop();
 	}
+
+	const {lang} = useContext(LanguageContext);
 
 	return(
 		<>
@@ -20,8 +25,8 @@ const Footer = () => {
 								rainyday
 							</SocialLogo>
 							<WebsiteRights>
-								© Pontis Digital Corporation. {new Date().getFullYear()+" "}
-								All rights reserved.
+								© Pontis Digital {lang==='en'?'Corporation':'Corporación'}. {new Date().getFullYear()+" "}
+								{lang==='en'?'All rights reserved.':'reservados todos los derechos'}
 							</WebsiteRights>
 							<SocialIcons>
 								<SocialIconLink

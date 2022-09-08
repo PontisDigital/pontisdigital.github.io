@@ -8,6 +8,9 @@ import ThirdPartyEmailPassword, {Github, Google, Facebook, Apple} from "supertok
 import Session from "supertokens-auth-react/recipe/session";
 import * as reactRouterDom from "react-router-dom";
 import axios from "axios";
+
+import {LanguageProvider} from './LanguageContext';
+
 function App() {
 SuperTokens.init({
     appInfo: {
@@ -41,14 +44,16 @@ SuperTokens.init({
 	Session.addAxiosInterceptors(axiosInstance);
 
   return (
-	  <SuperTokensWrapper>
-		  <Router>
-			  <Routes>
-				  <Route path="/" element={<Home/>}/>
-				  {getSuperTokensRoutesForReactRouterDom(reactRouterDom)}
-			  </Routes>
-		  </Router>
-	  </SuperTokensWrapper>
+	  <LanguageProvider>
+		  <SuperTokensWrapper>
+			  <Router>
+				  <Routes>
+					  <Route path="/" element={<Home/>}/>
+					  {getSuperTokensRoutesForReactRouterDom(reactRouterDom)}
+				  </Routes>
+			  </Router>
+		  </SuperTokensWrapper>
+	  </LanguageProvider>
   );
 }
 

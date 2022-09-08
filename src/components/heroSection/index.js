@@ -5,10 +5,15 @@ import {
 import {Button} from '../buttonElement'
 import Phone from '../../images/phone.png'
 
+import LanguageContext from '../../LanguageContext';
+import { useContext } from 'react';
+
 const HeroSection = () => {
 
 	const [hover,setHover] = useState(false)
 	const onHover = () => {setHover(!hover)}
+
+	const {lang} = useContext(LanguageContext);
 
 	return(
 		<>
@@ -18,10 +23,13 @@ const HeroSection = () => {
 				<HeroContent>
 					<div>
 						<HeroH1>
-							Get Paid Every Time You Shop
+							{lang==='en' ? 'Get Paid Every Time You Shop' : 'Cobra Cada vez que Compras'}
 						</HeroH1>
 						<HeroP>
-							Money is added to your account every time you shop with rainyday. No catch: simply download the app, shop like you normally do, and watch as your balance grows!
+							{lang==='en' ? 'Money is added to your account every time you shop with rainyday. No catch: simply download the app, shop like you normally do, and watch as your balance grows!'
+							:'Se agrega dinero a su cuenta cada vez que compra con rainyday. Sin problema: ¡simplemente descargue la aplicación, compre como lo hace normalmente y observe cómo crece su saldo!'
+
+							}
 						</HeroP>
 						<HeroBtnWrapper>
 							<Button to="waitlist"
@@ -33,7 +41,8 @@ const HeroSection = () => {
 								spy={true}
 								offset={-80}
 								>
-								Join today{hover ? <ArrowForward /> : <ArrowRight />}
+								{lang==='en' ? 'Join today' : 'Únete hoy'}
+								{hover ? <ArrowForward /> : <ArrowRight />}
 							</Button>
 						</HeroBtnWrapper>
 					</div>

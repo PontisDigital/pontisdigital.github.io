@@ -1,4 +1,4 @@
-export const homeObjOne = 
+export const englishSlide1 = 
 {
 	id: 'earn',
 	lightBg: false,
@@ -16,7 +16,7 @@ export const homeObjOne =
 	darkText: false
 }
 
-export const homeObjTwo = 
+export const englishSlide2 = 
 {
 	id: 'access',
 	lightBg: true,
@@ -34,19 +34,37 @@ export const homeObjTwo =
 	darkText: false
 }
 
-export const homeObjThree = 
+export const spanishSlide1 = 
 {
-	id: 'move',
+	id: 'earn',
+	lightBg: false,
+	lightText: true,
+	lightTextDesc: true,
+	topLine: 'Ganar',
+	heading: 'Míralo Acumularse',
+	description: 'encuentre tiendas cerca de usted en la aplicación y comience a recibir pagos por su rutina de compras hoy',
+	buttonLabel: 'Empezar',
+	imgStart: false,
+	img: require('../../images/piggyBank.svg').default,
+	alt: 'Tarjeta',
+	dark: false,
+	primary: true,
+	darkText: false
+}
+
+export const spanishSlide2 = 
+{
+	id: 'access',
 	lightBg: true,
 	lightText: false,
-	lightTextDesc: true,
-	topLine: 'Move Money',
-	heading: 'A New Way to Send and Receive Payments',
-	description: 'Unlimited transfers with zero fees to other users',
-	buttonLabel: 'Get Started',
+	lightTextDesc: false,
+	topLine: 'Acceso no Restingido',
+	heading: 'Gaste sus ganancias en cualquier lugar, de cualquier manera',
+	description: 'Puede dejar crecer su saldo, transferir ganancias a otras plataformas, como ATH Móvil o una cuenta bancaria, o gastar en cualquier lugar directamente desde su cuenta con una tarjeta de débito virtual gratuita. ¡La decisión es tuya!',
+	buttonLabel: 'Empezar',
 	imgStart: false,
-	img: require('../../images/onlineTransfer.svg').default,
-	alt: 'Card',
+	img: require('../../images/mobilePayment.svg').default,
+	alt: 'mobilePayment',
 	dark: false,
 	primary: false,
 	darkText: false

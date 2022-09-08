@@ -2,7 +2,12 @@ import { useState } from "react";
 import axios from "axios";
 import WaitlistModal from "./WaitlistModal";
 
+import LanguageContext from '../../LanguageContext';
+import { useContext } from 'react';
+
+
 const Waitlist = props => {
+const {lang} = useContext(LanguageContext);
 	//stores the values of the form
   const [email, setEmail] = useState("");
   const [firstName, setFirstName] = useState("");
@@ -226,7 +231,9 @@ const Waitlist = props => {
           setModal(3);
         } else {
           setModalError(
+			  lang==='en'?
             "Something went wrong on our end and your request is unable to be processed. Please try again later."
+			  :'Algo salió mal por nuestra parte y no se pudo procesar su solicitud. Por favor, inténtelo de nuevo más tarde.'
           );
           setModal(3);
         }
@@ -244,19 +251,23 @@ const Waitlist = props => {
         />
       )}
       <div className="container">
-        <h1 className="waitlist-title">Join now and get $5 for free</h1>
+        <h1 className="waitlist-title">
+			{lang==='en'?'Join now and get $5 for free' : 'Únase ahora y obtenga $5 gratis'}
+		</h1>
         <h3 className="waitlist-subtitle">
-			Share your referral code and get $3 everytime a friend joins
+			{lang==='en'?'Share your referral code and get $3 everytime a friend joins' : 'Comparta su código de referencia y obtenga $3 cada vez que un amigo se una'}
         </h3>
           <form
             className="waitlist-form"
             onSubmit={(e) => submitButtonPressed(e)}>
             <div className="waitlist-input-half-container">
 				<div className="waitlist-input-half">
-				  <p className="waitlist-input-text">Your First Name</p>
+				  <p className="waitlist-input-text">
+					  {lang==='en'?'Your First Name':'Su Nombre'}
+				  </p>
 				  {firstNameStatus === 0 && (
 					<p className="waitlist-input-error">
-					  There is an error with the name you entered.
+						{lang==='en'?'There is an error with the name you entered.':'Hay un error con el nombre que ingresaste.'}
 					</p>
 				  )}
 				  <input
@@ -266,10 +277,12 @@ const Waitlist = props => {
 				  />
 				</div>
 				<div className="waitlist-input-half">
-				  <p className="waitlist-input-text">Your Last Name</p>
+				  <p className="waitlist-input-text">
+					  {lang==='en'?'Your Last Name':'Tu Apellido'}
+				  </p>
 				  {lastName === 0 && (
 					<p className="waitlist-input-error">
-					  There is an error with the name you entered.
+						{lang==='en'?'There is an error with the name you entered.':'Hay un error con el apellido que ingresó.'}
 					</p>
 				  )}
 				  <input
@@ -281,10 +294,13 @@ const Waitlist = props => {
 			</div>
             <div className="waitlist-input-half-container">
 				<div className="waitlist-input-half">
-				  <p className="waitlist-input-text">Phone Number</p>
+				  <p className="waitlist-input-text">
+				  {lang==='en'?'Phone Number':'Número de Teléfono'}
+				  </p>
 				  {phoneStatus === 0 && (
 					<p className="waitlist-input-error">
-					  There is an error with the number you entered.
+						{lang==='en'?'There is an error with the number you entered.':'Hay un error con el número que ingresaste.'}
+					  
 					</p>
 				  )}
 				  <input
@@ -297,7 +313,7 @@ const Waitlist = props => {
 				  <p className="waitlist-input-text">Email</p>
 				  {emailStatus === 0 && (
 					<p className="waitlist-input-error">
-					  There is an error with the email you entered.
+					{lang==='en'?'There is an error with the email you entered.':'Hay un error con el correo electrónico que ingresaste.'}
 					</p>
 				  )}
 				  <input
@@ -309,20 +325,24 @@ const Waitlist = props => {
 			</div>
             <div className="waitlist-input-half-container">
             <div className="waitlist-input-half">
-              <p className="waitlist-input-text">Password</p>
+              <p className="waitlist-input-text">
+				  {lang==='en'?'Password':'Clave'}
+			  </p>
               {passwordStatus === 0 && (
                 <p className="waitlist-input-error">
-                  There is an error with the password you entered.
+					{lang==='en'?'There is an error with the password you entered.':'Hay un error con la contraseña que ingresaste.'}
                 </p>
               )}
               <input
                 type="password"
-                placeholder="Enter password..."
+				  placeholder={lang==='en'?'Password':'Contraseña'}
                 onInput={handlePasswordChange}
               />
             </div>
               <div className="waitlist-input waitlist-input-half">
-                <p className="waitlist-input-text">Your Birthday</p>
+                <p className="waitlist-input-text">
+				  {lang==='en'?'Your Birthday':'Tu cumpleaños'}
+				</p>
 				{birthdayStatus === 0 && (
                 <p className="waitlist-input-error">
                   There is an error with the password you entered.
@@ -336,7 +356,9 @@ const Waitlist = props => {
               </div>
             </div>
             <div className="waitlist-input">
-              <p className="waitlist-input-text">Street Address</p>
+              <p className="waitlist-input-text">
+				  {lang==='en'?'Street Address':'Dirección'}
+			  </p>
               {streetAddressStatus === 0 && (
                 <p className="waitlist-input-error">
                   There is an error with the address you entered.
@@ -350,7 +372,9 @@ const Waitlist = props => {
             </div>
             <div className="waitlist-input-half-container">
 				<div className="waitlist-input-half">
-				  <p className="waitlist-input-text">City</p>
+				  <p className="waitlist-input-text">
+				  {lang==='en'?'City':'Ciudad'}
+				  </p>
               {cityStatus === 0 && (
                 <p className="waitlist-input-error">
 					Required
@@ -363,7 +387,9 @@ const Waitlist = props => {
 				  />
 				</div>
 				<div className="waitlist-input-half">
-				  <p className="waitlist-input-text">State/Territory</p>
+				  <p className="waitlist-input-text">
+					  {lang==='en'?'State/Territory':'Estado/Territorio'}
+				  </p>
               {stateStatus === 0 && (
                 <p className="waitlist-input-error">
 					Required
@@ -376,7 +402,9 @@ const Waitlist = props => {
 				  />
 				</div>
 				<div className="waitlist-input-half">
-				  <p className="waitlist-input-text">ZIP Code</p>
+				  <p className="waitlist-input-text">
+					  {lang==='en'?'Zip Code':'Código Postal'}
+				  </p>
               {zipCodeStatus === 0 && (
                 <p className="waitlist-input-error">
 					Required
@@ -390,7 +418,9 @@ const Waitlist = props => {
 				</div>
 			</div>
             <div className="waitlist-input">
-              <p className="waitlist-input-text">Referral Code (optional)</p>
+              <p className="waitlist-input-text">
+				  {lang==='en'?'Referral Code (optional)':'Código de Referencia (Opcional)'}
+			  </p>
               <input
                 type="text"
                 placeholder="AB1234"
@@ -400,7 +430,7 @@ const Waitlist = props => {
             </div>
             <input
               type="submit"
-              value="Sign Up"
+				value={lang==='en'?'Sign Up':'Inscribirse'}
             />
           </form>
       </div>

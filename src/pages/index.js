@@ -3,23 +3,29 @@ import Navbar from '../components/navbar';
 import { useState } from 'react';
 import HeroSection from '../components/heroSection';
 import InfoSection from '../components/infoSection';
-import {homeObjOne,homeObjTwo} from '../components/infoSection/Data';
+import {englishSlide1,englishSlide2,spanishSlide1,spanishSlide2} from '../components/infoSection/Data';
 import Services from '../components/services';
 import Footer from '../components/footer';
 import Waitlist from '../components/waitlist';
+
+import LanguageContext from '../LanguageContext';
+import { useContext } from 'react';
 
 const Home = () => {
 	const [isOpen,setIsOpen] = useState(false)
 	const toggle = () => {
 		setIsOpen(!isOpen);
 	}
+	
+	const {lang} = useContext(LanguageContext);
+
 	return(
 		<>
 			<Sidebar isOpen={isOpen} toggle={toggle}/>
 			<Navbar toggle={toggle}/>
 			<HeroSection/>
-			<InfoSection {...homeObjOne}/>
-			<InfoSection {...homeObjTwo}/>
+			<InfoSection {...lang==='en' ? englishSlide1 : spanishSlide1}/>
+			<InfoSection {...lang==='en' ? englishSlide2 : spanishSlide2}/>
 			<Services/>
 			<Waitlist/>
 			<Footer/>
