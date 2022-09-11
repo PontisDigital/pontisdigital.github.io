@@ -209,24 +209,47 @@ const {lang} = useContext(LanguageContext);
       .then(function (response) {
         setModal(2);
         // REFERRAL GENERATED COMES HERE
-		console.log("Response: " + response.data);
-        setCode(response.data);
-      })
-      .catch(function (error) {
-        console.log(error.response);
-        if (error.response.data === "DUPLICATE_PHONE") {
+		if(response.data.length == 6)
+		{
+			console.log("Response: " + response.data);
+			setCode(response.data);
+		}
+
+
+        if (response.data === "PHONE_EXISTS") {
           setModalError(
             "You're already signed up for the waitlist using this phone number!"
           );
           setModal(3);
-        } else if (error.response.data === "DUPLICATE_EMAIL") {
+        } else if (response.data === "EMAIL_EXISTS") {
           setModalError(
             "You've already registered with this email.  Please try again."
           );
           setModal(3);
-        } else if (error.response.data === "INVALID_PHONE") {
+        } else if (response.data === "PHONE_INVALID") {
           setModalError(
-            "Please enter a valid phone number.  Make sure you've added the proper international code before your number (+62)."
+            "Please enter a valid phone number"
+          );
+          setModal(3);
+			
+
+      }})
+      .catch(function (error) {
+        console.log(error.response.data);
+        console.log(error.response);
+        if (error.response.data === "PHONE_EXISTS") {
+          setModalError(
+            "You're already signed up for the waitlist using this phone number!"
+          );
+          setModal(3);
+        } else if (error.response.data === "EMAIL_EXISTS") {
+          setModalError(
+            "You've already registered with this email.  Please try again."
+          );
+          setModal(3);
+        } else if (error.response.data === "PHONE_INVALID") {
+          setModalError(
+            "Please enter a valid phone number"
           );
           setModal(3);
         } else {
