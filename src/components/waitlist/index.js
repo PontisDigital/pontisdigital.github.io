@@ -207,16 +207,25 @@ const {lang} = useContext(LanguageContext);
     axios
       .post("https://api.pontis.digital/waitlist", post, { headers })
       .then(function (response) {
-        setModal(2);
         // REFERRAL GENERATED COMES HERE
+			console.log("Response: " + response.data);
 		if(response.data.length === 6)
 		{
 			console.log("Response: " + response.data);
 			setCode(response.data);
+			setModal(2);
 		}
 
-
-        if (response.data === "PHONE_EXISTS") {
+		  if (response.data === "MISSING_INFO")
+		  {
+          setModalError(
+			  lang==='en'?
+			  "All fields are required. Unless they are marked optional":
+			  "Todos los campos son obligatorios. A menos que estén marcados como opcionales"
+          );
+          setModal(3);
+		  }
+		  else if (response.data === "PHONE_EXISTS") {
           setModalError(
 			  lang==='en'?
 			  "You're already signed up for the waitlist using this phone number!":
@@ -237,7 +246,6 @@ const {lang} = useContext(LanguageContext);
 			  "Por favor ingrese un número de teléfono válido"
           );
           setModal(3);
-			
 
       }})
       .catch(function (error) {
