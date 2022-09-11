@@ -209,7 +209,7 @@ const {lang} = useContext(LanguageContext);
       .then(function (response) {
         setModal(2);
         // REFERRAL GENERATED COMES HERE
-		if(response.data.length == 6)
+		if(response.data.length === 6)
 		{
 			console.log("Response: " + response.data);
 			setCode(response.data);
@@ -218,17 +218,23 @@ const {lang} = useContext(LanguageContext);
 
         if (response.data === "PHONE_EXISTS") {
           setModalError(
-            "You're already signed up for the waitlist using this phone number!"
+			  lang==='en'?
+			  "You're already signed up for the waitlist using this phone number!":
+			  "¡Ya estás inscrito en la lista de espera con este número de teléfono!"
           );
           setModal(3);
         } else if (response.data === "EMAIL_EXISTS") {
           setModalError(
-            "You've already registered with this email.  Please try again."
+			  lang==='en'?
+			  "You've already registered with this email.  Please try again.":
+			  "Ya te has registrado con este correo electrónico. Inténtalo de nuevo."
           );
           setModal(3);
         } else if (response.data === "PHONE_INVALID") {
           setModalError(
-            "Please enter a valid phone number"
+			  lang==='en'?
+			  "Please enter a valid phone number":
+			  "Por favor ingrese un número de teléfono válido"
           );
           setModal(3);
 			
@@ -239,17 +245,23 @@ const {lang} = useContext(LanguageContext);
         console.log(error.response);
         if (error.response.data === "PHONE_EXISTS") {
           setModalError(
-            "You're already signed up for the waitlist using this phone number!"
+			  lang==='en'?
+			  "You're already signed up for the waitlist using this phone number!":
+			  "¡Ya estás inscrito en la lista de espera con este número de teléfono!"
           );
           setModal(3);
         } else if (error.response.data === "EMAIL_EXISTS") {
           setModalError(
-            "You've already registered with this email.  Please try again."
+			  lang==='en'?
+			  "You've already registered with this email.  Please try again.":
+			  "Ya te has registrado con este correo electrónico. Inténtalo de nuevo."
           );
           setModal(3);
         } else if (error.response.data === "PHONE_INVALID") {
           setModalError(
-            "Please enter a valid phone number"
+			  lang==='en'?
+			  "Please enter a valid phone number":
+			  "Por favor ingrese un número de teléfono válido"
           );
           setModal(3);
         } else {
