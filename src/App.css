@@ -43,6 +43,7 @@ body
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
+	font-size: 20px;
 }
 .waitlist-form input {
     width: calc(100% - 20px);
@@ -53,7 +54,8 @@ body
     border-radius: 3px;
     font-weight: 500;
     margin-bottom: 20px;
-	font-size: calc(.5vw + 1vh + 1vmin);
+	font-size: 20px;
+	width: 100%;
 }
 
 .waitlist-form select {
@@ -104,10 +106,13 @@ body
     width: calc(50% - 10px);
 }
 
+.waitlist-input-third {
+    width: calc(33% - 10px);
+}
+
 
 .waitlist-input-text {
     color: white;
-	font-size: calc(.5vw + 1vh + .5vmin);
     margin-bottom: 5px;
     font-weight: 500;
 }
@@ -187,3 +192,16 @@ body
     margin-top: 20px;
 }
 @media screen and (max-width: 850px) {}
+
+@media screen  and (max-width: 480px)
+{
+	.waitlist-form
+	{
+		font-size: 13px;
+	}
+
+	.waitlist-form input
+	{
+		font-size: 15px;
+	}
+}

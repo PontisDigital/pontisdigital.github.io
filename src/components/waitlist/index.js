@@ -308,8 +308,24 @@ const {lang} = useContext(LanguageContext);
 					placeholder="123-456-7890"
 					onInput={handlePhoneChange}
 				  />
+              </div>
+              <div className="waitlist-input-half">
+                <p className="waitlist-input-text">
+				  {lang==='en'?'Your Birthday':'Tu cumpleaños'}
+				</p>
+				{birthdayStatus === 0 && (
+                <p className="waitlist-input-error">
+                  There is an error with the password you entered.
+                </p>
+              )}
+                <input
+					type="date"
+					placeholder="Enter birthday"
+					onInput={handleBirthdayChange}
+				/>
 				</div>
-				<div className="waitlist-input-half">
+				</div>
+				<div className="waitlist-input">
 				  <p className="waitlist-input-text">Email</p>
 				  {emailStatus === 0 && (
 					<p className="waitlist-input-error">
@@ -322,9 +338,7 @@ const {lang} = useContext(LanguageContext);
 					onInput={handleEmailChange}
 				  />
 				</div>
-			</div>
-            <div className="waitlist-input-half-container">
-            <div className="waitlist-input-half">
+            <div className="waitlist-input">
               <p className="waitlist-input-text">
 				  {lang==='en'?'Password':'Clave'}
 			  </p>
@@ -339,21 +353,7 @@ const {lang} = useContext(LanguageContext);
                 onInput={handlePasswordChange}
               />
             </div>
-              <div className="waitlist-input waitlist-input-half">
-                <p className="waitlist-input-text">
-				  {lang==='en'?'Your Birthday':'Tu cumpleaños'}
-				</p>
-				{birthdayStatus === 0 && (
-                <p className="waitlist-input-error">
-                  There is an error with the password you entered.
-                </p>
-              )}
-                <input
-					type="date"
-					placeholder="Enter birthday"
-					onInput={handleBirthdayChange}
-				/>
-              </div>
+            <div className="waitlist-input-half-container">
             </div>
             <div className="waitlist-input">
               <p className="waitlist-input-text">
@@ -371,7 +371,7 @@ const {lang} = useContext(LanguageContext);
               />
             </div>
             <div className="waitlist-input-half-container">
-				<div className="waitlist-input-half">
+				<div className="waitlist-input-third">
 				  <p className="waitlist-input-text">
 				  {lang==='en'?'City':'Ciudad'}
 				  </p>
@@ -386,9 +386,9 @@ const {lang} = useContext(LanguageContext);
 					onInput={handleCityChange}
 				  />
 				</div>
-				<div className="waitlist-input-half">
+				<div className="waitlist-input-third">
 				  <p className="waitlist-input-text">
-					  {lang==='en'?'State/Territory':'Estado/Territorio'}
+					  {lang==='en'?'State':'Estado'}
 				  </p>
               {stateStatus === 0 && (
                 <p className="waitlist-input-error">
@@ -401,7 +401,7 @@ const {lang} = useContext(LanguageContext);
 					onInput={handleStateChange}
 				  />
 				</div>
-				<div className="waitlist-input-half">
+				<div className="waitlist-input-third">
 				  <p className="waitlist-input-text">
 					  {lang==='en'?'Zip Code':'Código Postal'}
 				  </p>
@@ -411,7 +411,7 @@ const {lang} = useContext(LanguageContext);
                 </p>
               )}
 				  <input
-					type="text"
+					type="number"
 					placeholder="00791"
 					onInput={handleZipChange}
 				  />
