@@ -1,19 +1,23 @@
 {
   "files": {
     "main.css": "/static/css/main.41b601a6.css",
-    "main.js": "/static/js/main.3235c944.js",
+    "main.js": "/static/js/main.531c926e.js",
     "static/media/phone.png": "/static/media/phone.767ba11781de7d0e62c8.png",
     "static/media/preparedForRainyday.svg": "/static/media/preparedForRainyday.3263d0c94d931023891482585c799a91.svg",
     "static/media/shopping.svg": "/static/media/shopping.1e7ab15546f04389cf776451d83c92d7.svg",
     "static/media/piggyBank.svg": "/static/media/piggyBank.b2234ef2ea13a3571b7e6bffd1ff96ec.svg",
+    "static/media/setup.svg": "/static/media/setup.82ca553577049582981c9cafe5f8cd8f.svg",
+    "static/media/shoppingOnline.svg": "/static/media/shoppingOnline.505d7e68eaf927d5d25a06cacf24f890.svg",
+    "static/media/earn.svg": "/static/media/earn.ecfd68c3966a9ac19c0b6315305dcd25.svg",
     "static/media/mobilePayment.svg": "/static/media/mobilePayment.de3f2f5bd3bc255e7a0ab6dae9c586c3.svg",
     "static/media/access.svg": "/static/media/access.168c40276fb17c57df08097d21b7f42c.svg",
+    "static/media/download.svg": "/static/media/download.72d4d019a491583f9aae5f0905c8e39d.svg",
     "index.html": "/index.html",
     "main.41b601a6.css.map": "/static/css/main.41b601a6.css.map",
-    "main.3235c944.js.map": "/static/js/main.3235c944.js.map"
+    "main.531c926e.js.map": "/static/js/main.531c926e.js.map"
   },
   "entrypoints": [
     "static/css/main.41b601a6.css",
-    "static/js/main.3235c944.js"
+    "static/js/main.531c926e.js"
   ]
 }
