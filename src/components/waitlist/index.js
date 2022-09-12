@@ -295,7 +295,7 @@ const {lang} = useContext(LanguageContext);
       )}
       <div className="container">
         <h1 className="waitlist-title">
-			{lang==='en'?'Join now and get $5 for free' : 'Únase ahora y obtenga $5 gratis'}
+			{lang==='en'?'Join the waitlist now and get $5 for free' : 'Únase a la lista de espera ahora y obtenga $5 gratis'}
 		</h1>
         <h3 className="waitlist-subtitle">
 			{lang==='en'?'Share your referral code and get $3 everytime a friend joins' : 'Comparta su código de referencia y obtenga $3 cada vez que un amigo se una'}
