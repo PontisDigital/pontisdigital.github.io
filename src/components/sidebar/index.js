@@ -21,6 +21,9 @@ const Sidebar = ({isOpen, toggle}) => {
 					<SidebarLink to="nutshell" onClick={toggle}>
 					{lang==='en' ? 'In a Nutshell' : 'En una Palabra'}
 					</SidebarLink>
+					<SidebarLink to="howitworks" onClick={toggle}>
+					{lang==='en' ? 'How it Works' : 'Cómo funciona'}
+					</SidebarLink>
 					<SidebarLink to="waitlist" onClick={toggle}>
 					{lang==='en' ? 'Sign Up' : 'Inscribirse'}
 					</SidebarLink>
