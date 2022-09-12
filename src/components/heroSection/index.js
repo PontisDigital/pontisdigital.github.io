@@ -22,17 +22,6 @@ const HeroSection = () => {
 			<HeroContainer id="home">
 				<HeroBg>
 				</HeroBg>
-					<HeroBtnWrapper>
-						<MobileOnlyButton
-							onMouseEnter={onHoverLang} onMouseLeave={onHoverLang}
-							primary='true'
-							dark='true'
-							onClick={toggleLang}
-							>
-							{lang==='en' ? 'Ver En Español' : 'View In English'}
-							{hoverLang ? <ArrowForward /> : <ArrowRight />}
-						</MobileOnlyButton>
-					</HeroBtnWrapper>
 					<HeroContent>
 
 					<div>

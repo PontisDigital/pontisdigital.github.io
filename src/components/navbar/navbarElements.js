@@ -91,7 +91,38 @@ export const NavLinks = styled(LinkScroll)`
 	}
 `
 
+export const NavButtonMobile = styled.nav`
+
+	display: none;
+
+	@media screen and (max-width: 768px)
+	{
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0px;
+		transform: translate(-100%,60%);
+		font-size:1.8rem;
+		cursor: pointer;
+		color: #fff;
+		z-index: -1000;
+	}
+
+	@media screen and (max-width: 480px)
+	{
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0px;
+		transform: translate(-70%,50%);
+		font-size:1.8rem;
+		cursor: pointer;
+		color: #fff;
+		z-index: -1000;
+	}
+`
 export const NavButton = styled.nav`
+
 	display: flex;
 	align-items: center;
 	
