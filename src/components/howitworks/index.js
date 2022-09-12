@@ -39,7 +39,7 @@ const HowItWorks = () => {
 							{lang==='en' ? 'Step Three: Start Earning' : 'Paso tres: comience a ganar'}
 						</ServicesH2>
 						<ServicesP>
-							{lang==='en' ? 'That’s it! You’ll earn automatically when you shop at supported locations. Earn when you spend with credit/debit cards by linking them to your account. Paying with cash? No worries: just scan the QR code available at check-out and get paid all the same.' : '¡Eso es todo! Ganará automáticamente cuando compre en ubicaciones admitidas. Gane cuando gaste con tarjetas de crédito/débito vinculándolas a su cuenta. ¿Pagando en efectivo? No se preocupe: simplemente escanee el código QR disponible en el momento del pago y reciba el pago de todos modos.'}
+							{lang==='en' ? 'Link your credit/debit card to save automatically. Paying with cash? No worries: just scan the QR code available at check-out and get paid all the same.' : 'Vincula tu tarjeta de crédito/débito para guardar automáticamente. ¿Pagando en efectivo? No se preocupe: simplemente escanee el código QR disponible en el momento del pago y reciba el pago de todos modos.'}
 						</ServicesP>
 					</ServicesCard>
 					<ServicesCard>

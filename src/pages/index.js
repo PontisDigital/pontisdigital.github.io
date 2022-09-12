@@ -25,10 +25,10 @@ const Home = () => {
 			<Sidebar isOpen={isOpen} toggle={toggle}/>
 			<Navbar toggle={toggle}/>
 			<HeroSection/>
+			<HowItWorks/>
 			<InfoSection {...lang==='en' ? englishSlide1 : spanishSlide1}/>
 			<InfoSection {...lang==='en' ? englishSlide2 : spanishSlide2}/>
 			<Services/>
-			<HowItWorks/>
 			<Waitlist/>
 			<Footer/>
 		</>

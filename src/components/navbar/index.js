@@ -45,6 +45,17 @@ const Navbar = ({toggle}) => {
 					</MobileIcon>
 					<NavMenu>
 						<NavItem>
+							<NavLinks to="howitworks"
+								smooth={true}
+								duration={500}
+								spy={true}
+								exact='true'
+								offset={-80}
+							>
+								{lang==='en' ? 'How it Works' : 'Cómo funciona'}
+							</NavLinks>
+						</NavItem>
+						<NavItem>
 							<NavLinks to="earn"
 								smooth={true}
 								duration={500}
@@ -75,17 +86,6 @@ const Navbar = ({toggle}) => {
 								offset={-80}
 							>
 								{lang==='en' ? 'In a Nutshell' : 'En una Palabra'}
-							</NavLinks>
-						</NavItem>
-						<NavItem>
-							<NavLinks to="howitworks"
-								smooth={true}
-								duration={500}
-								spy={true}
-								exact='true'
-								offset={-80}
-							>
-								{lang==='en' ? 'How it Works' : 'Cómo funciona'}
 							</NavLinks>
 						</NavItem>
 						<NavItem>
