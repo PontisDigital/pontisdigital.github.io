@@ -7,6 +7,7 @@ import {englishSlide1,englishSlide2,spanishSlide1,spanishSlide2} from '../compon
 import Services from '../components/services';
 import Footer from '../components/footer';
 import Waitlist from '../components/waitlist';
+import HowItWorks from '../components/howitworks'
 
 import LanguageContext from '../LanguageContext';
 import { useContext } from 'react';
@@ -27,6 +28,7 @@ const Home = () => {
 			<InfoSection {...lang==='en' ? englishSlide1 : spanishSlide1}/>
 			<InfoSection {...lang==='en' ? englishSlide2 : spanishSlide2}/>
 			<Services/>
+			<HowItWorks/>
 			<Waitlist/>
 			<Footer/>
 		</>

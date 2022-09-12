@@ -73,6 +73,17 @@ const Navbar = ({toggle}) => {
 							</NavLinks>
 						</NavItem>
 						<NavItem>
+							<NavLinks to="howitworks"
+								smooth={true}
+								duration={500}
+								spy={true}
+								exact='true'
+								offset={-80}
+							>
+								{lang==='en' ? 'How it Works' : 'Cómo funciona'}
+							</NavLinks>
+						</NavItem>
+						<NavItem>
 							<NavLinks to="waitlist"
 								smooth={true}
 								duration={500}
