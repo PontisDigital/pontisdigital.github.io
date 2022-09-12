@@ -29,7 +29,7 @@ const HeroSection = () => {
 							{lang==='en' ? 'Get Paid Every Time You Shop' : 'Cobra Cada vez que Compras'}
 						</HeroH1>
 						<HeroP>
-							{lang==='en' ? 'Money is added to your account every time you shop with rainyday. No catch: simply download the app, shop like you normally do, and watch as your balance grows!'
+							{lang==='en' ? 'Money is added to your account every time you shop with rainyday. No catch: simply download the app, shop like you normally do, and watch your balance grow!'
 							:'Se agrega dinero a su cuenta cada vez que compra con rainyday. Sin problema: ¡simplemente descargue la aplicación, compre como lo hace normalmente y observe cómo crece su saldo!'
 
 							}
