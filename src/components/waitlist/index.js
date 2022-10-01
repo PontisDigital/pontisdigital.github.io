@@ -25,18 +25,14 @@ const {lang} = useContext(LanguageContext);
     console.log(event.target.value);
     setEmail(event.target.value);
     console.log("Length", event.target.value.length);
-    if (event.target.value.length === 0) {
-      setEmailStatus(0);
-    } else if (
-      event.target.value.indexOf("@") === -1 ||
-      event.target.value.indexOf(".") === -1 ||
-      event.target.value.indexOf("email=") !== -1
-    ) {
-      //third test is preventing error in backend validation
-      setEmailStatus(0);
-    } else {
-      setEmailStatus(1);
-    }
+	  if(event.target.value.includes("@") && event.target.value.includes(".") && event.target.value.length > 0)
+	  {
+		  setEmailStatus(1);
+	  }
+	  else
+	  {
+		  setEmailStatus(0);
+	  }
   };
 
   const toggleModal = () => {
@@ -160,7 +156,11 @@ const {lang} = useContext(LanguageContext);
             className="waitlist-form"
             onSubmit={(e) => submitButtonPressed(e)}>
 				<div className="waitlist-input">
-				  <p className="waitlist-input-text">Email</p>
+				  <p className="waitlist-input-text">
+                  {
+                    lang==='en'?'Please enter your email':'Por favor introduzca su correo electrónico'
+                  }
+                  </p>
 				  {emailStatus === 0 && (
 					<p className="waitlist-input-error">
 					{lang==='en'?'There is an error with the email you entered.':'Hay un error con el correo electrónico que ingresaste.'}
@@ -177,7 +177,7 @@ const {lang} = useContext(LanguageContext);
               type="submit"
 				value={lang==='en'?'Register':'Inscribirse'}
 				disable={
-					!emailStatus
+					true
 				}
             />
           </form>
