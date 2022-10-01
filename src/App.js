@@ -16,10 +16,10 @@ SuperTokens.init({
     appInfo: {
         // learn more about this on https://supertokens.com/docs/thirdpartyemailpassword/appinfo
         appName: "Rainyday",
-        apiDomain: "https://api.pontis.digital",
+        apiDomain: "htts://api.rainyday.deals/stokens",
         websiteDomain: "https://rainyday.deals",
         apiBasePath: "/auth",
-        websiteBasePath: "/login"
+        websiteBasePath: "/auth"
     },
     recipeList: [
         ThirdPartyEmailPassword.init({
@@ -37,7 +37,7 @@ SuperTokens.init({
 });
 
 	let axiosInstance = axios.create({
-		baseURL: 'https://api.pontis.digital/',
+		baseURL: 'https://api.rainyday.deals/',
 		timeout: 1000,
 		headers: {'Content-Type': 'application/json'}
 	})
