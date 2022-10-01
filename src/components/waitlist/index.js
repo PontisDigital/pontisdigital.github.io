@@ -87,8 +87,8 @@ const {lang} = useContext(LanguageContext);
         } else if (response.data === "EMAIL_EXISTS") {
           setModalError(
 			  lang==='en'?
-			  "You've already registered with this email.  Please try again.":
-			  "Ya te has registrado con este correo electrónico. Inténtalo de nuevo."
+			  "You've already registered with this email":
+			  "Ya te has registrado con este correo electrónico"
           );
           setModal(3);
         } else if (response.data === "PHONE_INVALID") {

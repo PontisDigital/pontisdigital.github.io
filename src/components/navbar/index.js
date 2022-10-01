@@ -94,7 +94,7 @@ const Navbar = ({toggle}) => {
 								duration={500}
 								spy={true}
 								exact='true'
-								offset={-100}
+								offset={-150}
 							>
 							{lang==='en' ? 'Sign Up' : 'Inscribirse'}
 							</NavLinks>
