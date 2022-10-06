@@ -1,7 +1,8 @@
 import './App.css';
-import {HashRouter as Router, Routes, Route} from 'react-router-dom'
+import React from 'react';
+import {HashRouter,BrowserRouter, Routes, Route} from 'react-router-dom'
+import ReactDOM from 'react-dom/client';
 import Home from './pages'
-import LoginPage from './pages/login';
 
 import SuperTokens, { SuperTokensWrapper, getSuperTokensRoutesForReactRouterDom} from "supertokens-auth-react";
 import ThirdPartyEmailPassword, {Github, Google, Facebook, Apple} from "supertokens-auth-react/recipe/thirdpartyemailpassword";
@@ -10,6 +11,7 @@ import * as reactRouterDom from "react-router-dom";
 import axios from "axios";
 
 import {LanguageProvider} from './LanguageContext';
+import LoginPage from './pages/login';
 
 function App() {
 SuperTokens.init({
@@ -43,18 +45,36 @@ SuperTokens.init({
 	})
 	Session.addAxiosInterceptors(axiosInstance);
 
+/*
   return (
 	  <LanguageProvider>
 		  <SuperTokensWrapper>
-			  <Router>
+			  <BrowserRouter>
 				  <Routes>
 					  <Route path="/" element={<Home/>}/>
+					  <Route path="/login" element={<Home/>}/>
 					  {getSuperTokensRoutesForReactRouterDom(reactRouterDom)}
 				  </Routes>
-			  </Router>
+			  </BrowserRouter>
 		  </SuperTokensWrapper>
 	  </LanguageProvider>
   );
+  */
+if (SuperTokens.canHandleRoute()) {
+            // This renders the login UI on the /auth route
+            return SuperTokens.getRoutingComponent()
+}
+ReactDOM.createRoot(document.getElementById('root')).render(
+      <SuperTokensWrapper>
+                <LanguageProvider>
+                  <HashRouter basename="/">
+                      <Routes>
+                          <Route path="/" element={<Home/>}/>
+                      </Routes>
+                  </HashRouter>
+              </LanguageProvider>
+      </SuperTokensWrapper>
+);
 }
 
 export default App;

@@ -4,7 +4,7 @@ import WaitlistModal from "./WaitlistModal";
 
 import LanguageContext from '../../LanguageContext';
 import { useContext } from 'react';
-
+import {Img, ImgWrap} from './waitlistElements';
 
 const Waitlist = props => {
 const {lang} = useContext(LanguageContext);

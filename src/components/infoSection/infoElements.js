@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const InfoContainer = styled.div`
 	color: #fff;
-	background: ${({lightBg})=>(lightBg ? '#6a779b' : '#010606')};
+	background: ${({lightBg})=>(lightBg ? '#4483AE' : '#010606')};
 	@media screen and (max-width: 768px)
 	{
 		padding: 100px 0;
@@ -98,3 +98,4 @@ export const Img = styled.img`
 	margin: 0 0 10px 0;
 	padding-right: 0;
 `
+
