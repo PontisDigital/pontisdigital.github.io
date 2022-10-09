@@ -27,7 +27,7 @@ export const englishSlide2 =
 	description: 'You can let your balance grow, transfer earnings to other platforms—like ATH Movil or a bank account—or spend anywhere directly from your account with a free virtual debit card. The choice is yours!',
 	buttonLabel: 'Get Started',
 	imgStart: false,
-	img: require('../../images/discovery.png'),
+	img: require('../../images/discoveryEng.png'),
 	alt: 'mobilePayment',
 	dark: false,
 	primary: false,

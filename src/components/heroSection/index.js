@@ -3,7 +3,8 @@ import {
 	HeroContainer, HeroFlex, HeroBg, HeroImage, HeroContent,HeroH1,HeroP,HeroBtnWrapper,ArrowForward,ArrowRight, BlackShade
 } from './heroElements'
 import {Button,MobileOnlyButton} from '../buttonElement'
-import Phone from '../../images/dashboard.png'
+import PhoneSpanish from '../../images/dashboard.png'
+import PhoneEnglish from '../../images/phone.png'
 
 import LanguageContext from '../../LanguageContext';
 import { useContext } from 'react';
@@ -49,7 +50,7 @@ const HeroSection = () => {
 							</Button>
 						</HeroBtnWrapper>
 					</div>
-					<HeroImage src={Phone}/>
+						<HeroImage src={lang==='en' ? PhoneEnglish : PhoneSpanish}/>
 				</HeroContent>
 			</HeroContainer>
 		</>

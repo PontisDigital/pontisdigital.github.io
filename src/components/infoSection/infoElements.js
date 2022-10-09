@@ -7,6 +7,10 @@ export const InfoContainer = styled.div`
 	{
 		padding: 100px 0;
 	}
+	@media screen and (max-width: 480px)
+	{
+		padding-bottom: 300px;
+	}
 `
 
 export const InfoWrapper = styled.div`
@@ -91,11 +95,21 @@ export const ButtonWrap = styled.div`
 export const ImgWrap = styled.div`
 	max-width: 555px;
 	height: 100%;
+
+	@media screen and (max-width: 480px)
+	{
+	}
 `
 
 export const Img = styled.img`
 	width: 100%;
 	margin: 0 0 10px 0;
 	padding-right: 0;
+	@media screen and (max-width: 480px)
+	{
+		position: relative;
+		right: 35px;
+		width: 100%;
+	}
 `
 
