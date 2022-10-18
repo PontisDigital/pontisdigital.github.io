@@ -3,11 +3,15 @@ import axios from "axios";
 import WaitlistModal from "./WaitlistModal";
 
 import LanguageContext from '../../LanguageContext';
+import { useSearchParams } from "react-router-dom";
 import { useContext } from 'react';
-import {Img, ImgWrap} from './waitlistElements';
 
 const Waitlist = props => {
 const {lang} = useContext(LanguageContext);
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  const refCode = searchParams.get("rc");
+
 	//stores the values of the form
   const [email, setEmail] = useState("");
 
@@ -46,6 +50,7 @@ const {lang} = useContext(LanguageContext);
     event.preventDefault();
 	let post = new Map();
 	post['email'] = email;
+    post['refUsed'] = refCode;
 	  const headers = {
 		  "Content-Type": "application/json",
 	  };
@@ -145,6 +150,7 @@ const {lang} = useContext(LanguageContext);
           error={modalError}
         />
       )}
+
       <div className="container">
         <h1 className="waitlist-title">
 			{lang==='en'?'Join the waitlist now and get $5 for free' : 'Únase a la lista de espera ahora y obtenga $5 gratis'}
@@ -172,7 +178,19 @@ const {lang} = useContext(LanguageContext);
 					onInput={handleEmailChange}
 				  />
 				</div>
-            
+
+                <div className="waitlist-input">
+				  <p className="waitlist-input-text">
+                  {
+                    lang==='en'?'Please enter your referral code (optional)':'Por favor ingrese su código de referencia (opcional)'
+                  }
+                  </p>
+				  <input
+					type="text"
+					placeholder="123ABC"
+                    value={refCode}
+				  />
+				</div>
             <input
               type="submit"
 				value={lang==='en'?'Register':'Inscribirse'}

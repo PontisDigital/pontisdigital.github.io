@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import {HashRouter,BrowserRouter, Routes, Route} from 'react-router-dom'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import ReactDOM from 'react-dom/client';
 import Home from './pages'
 
@@ -67,11 +67,11 @@ if (SuperTokens.canHandleRoute()) {
 ReactDOM.createRoot(document.getElementById('root')).render(
       <SuperTokensWrapper>
                 <LanguageProvider>
-                  <HashRouter basename="/">
+                  <BrowserRouter basename="/">
                       <Routes>
                           <Route path="/" element={<Home/>}/>
                       </Routes>
-                  </HashRouter>
+                  </BrowserRouter>
               </LanguageProvider>
       </SuperTokensWrapper>
 );
