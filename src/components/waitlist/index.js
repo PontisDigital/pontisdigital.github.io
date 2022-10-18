@@ -66,7 +66,7 @@ const {lang} = useContext(LanguageContext);
       .then(function (response) {
         // REFERRAL GENERATED COMES HERE
 			console.log("Response: " + response.data);
-		if(response.data.length === 6)
+		if(response.data.length === 9)
 		{
 			console.log("Response: " + response.data);
 			setCode(response.data);
@@ -201,7 +201,7 @@ const {lang} = useContext(LanguageContext);
                   </p>
 				  <input
 					type="text"
-					placeholder="123ABC"
+					placeholder="123ABCDEF"
                     value={refCode}
                     onInput={handleRefChange}
 				  />

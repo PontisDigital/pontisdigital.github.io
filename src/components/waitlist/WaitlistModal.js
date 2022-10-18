@@ -48,16 +48,6 @@ const {lang} = useContext(LanguageContext);
 			  <strong>{lang==='en'?'share the code below and earn $3':'comparte el código de abajo y gana $3'}</strong>{" "}
 			  {lang==='en'?'every time someone uses it at sign-up!':'cada vez que alguien lo usa al registrarse!'}
           </p>
-          <div className="waitlist-modal-referral-container">
-            <h3 className="waitlist-modal-referral">{props.code}</h3>
-            <button
-              className="waitlist-modal-copy-btn"
-              onClick={() => {
-                navigator.clipboard.writeText(props.code);
-              }}>
-              COPY
-            </button>
-          </div>
 
           <div className="waitlist-modal-referral-container">
             <h3 className="waitlist-modal-referral">{props.code}</h3>
