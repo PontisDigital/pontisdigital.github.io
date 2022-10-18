@@ -44,7 +44,7 @@ export const NavLogo = styled(LinkRouter)`
 
 export const MobileIcon = styled.div`
 	display: none;
-	@media screen and (max-width: 768px)
+	@media screen and (max-width: 1066px)
 	{
 		display: block;
 		position: absolute;
@@ -63,7 +63,7 @@ export const NavMenu = styled.ul`
 	align-items: center;
 	margin-right: -22px;
 
-	@media screen and (max-width: 768px)
+	@media screen and (max-width: 1066px)
 	{
 		display: none;
 	}
@@ -95,7 +95,7 @@ export const NavButtonMobile = styled.nav`
 
 	display: none;
 
-	@media screen and (max-width: 768px)
+	@media screen and (max-width: 1066px)
 	{
 		display: block;
 		position: absolute;
@@ -126,7 +126,7 @@ export const NavButton = styled.nav`
 	display: flex;
 	align-items: center;
 	
-	@media screen and (max-width: 768px)
+	@media screen and (max-width: 1066px)
 	{
 		display: none;
 	}
