@@ -196,7 +196,7 @@ const {lang} = useContext(LanguageContext);
                 <div className="waitlist-input">
 				  <p className="waitlist-input-text">
                   {
-                    lang==='en'?'Please enter your referral code (optional)':'Por favor ingrese su código de referencia (opcional)'
+                    lang==='en'?'Please enter a referral code (optional)':'Ingrese un código de referencia (opcional)'
                   }
                   </p>
 				  <input
