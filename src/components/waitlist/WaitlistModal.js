@@ -53,6 +53,17 @@ const {lang} = useContext(LanguageContext);
             <button
               className="waitlist-modal-copy-btn"
               onClick={() => {
+                navigator.clipboard.writeText(props.code);
+              }}>
+              COPY
+            </button>
+          </div>
+
+          <div className="waitlist-modal-referral-container">
+            <h3 className="waitlist-modal-referral">{props.code}</h3>
+            <button
+              className="waitlist-modal-copy-btn"
+              onClick={() => {
 				  navigator.clipboard.writeText(message + ' https://rainyday.deals?rc='+ props.code);
               }}>
 				{lang==='en'?'COPY':'COPIAR'}

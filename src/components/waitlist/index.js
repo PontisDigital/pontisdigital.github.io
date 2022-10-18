@@ -96,6 +96,13 @@ const {lang} = useContext(LanguageContext);
 			  "Gracias por registrarte! ¡Pronto recibirás un correo electrónico con más información!"
           );
           setModal(3);
+        } else if (response.data === "INVALID_REFERRAL_USED") {
+          setModalError(
+			  lang==='en'?
+			  "Invalid Referral Code":
+			  "código de referencia no válido"
+          );
+          setModal(3);
         } else if (response.data === "EMAIL_EXISTS") {
           setModalError(
 			  lang==='en'?
