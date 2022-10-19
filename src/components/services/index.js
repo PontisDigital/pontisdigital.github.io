@@ -17,10 +17,10 @@ const Services = () => {
 					<ServicesCard>
 						<ServicesIcon src={Icon1}/>
 						<ServicesH2>
-							{lang==='en' ? 'Earn More' : 'Ganar Mas'}
+							{lang==='en' ? 'Earn More' : 'Ganar Más'}
 						</ServicesH2>
 						<ServicesP>
-							{lang==='en' ? 'Shop like you already do and earn hundreds.' : 'Compra como ya lo haces y gana cientos.'}
+							{lang==='en' ? 'Shop like you already do and earn hundreds.' : 'Compre como hasta ahora y gane dinero'}
 						</ServicesP>
 					</ServicesCard>
 					<ServicesCard>
@@ -29,7 +29,7 @@ const Services = () => {
 							{lang==='en' ? 'Stress Less' : 'Menos Estrés'}
 						</ServicesH2>
 						<ServicesP>
-							{lang==='en' ? 'With us, you’ll always be prepared for a rainy day.' : 'Con nosotros, siempre estarás preparado para un día lluvioso.'}
+							{lang==='en' ? 'With us, you’ll always be prepared for a rainy day.' : 'Con nosotros, siempre estará preparado para un día lluvioso.'}
 						</ServicesP>
 					</ServicesCard>
 					<ServicesCard>
@@ -38,7 +38,7 @@ const Services = () => {
 							{lang==='en' ? 'Access Always' : 'Acceder Siempre'}
 						</ServicesH2>
 						<ServicesP>
-							{lang==='en' ? 'Get paid in real time and access your balance anytime, anywhere.' : 'Reciba pagos en tiempo real y acceda a su saldo en cualquier momento y en cualquier lugar.'}
+							{lang==='en' ? 'Get paid in real time and access your balance anytime, anywhere.' : 'Reciba pagos en tiempo real y acceda a su saldo cuando y donde quiera.'}
 						</ServicesP>
 					</ServicesCard>
 				</ServicesWrapper>

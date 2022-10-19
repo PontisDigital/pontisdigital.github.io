@@ -21,13 +21,13 @@ const HowItWorks = () => {
 							{lang==='en' ? 'Step One: Download the App' : 'Paso uno: descarga la aplicación'}
 						</ServicesH2>
 						<ServicesP>
-							{lang==='en' ? 'Coming soon on all platforms. Free forever.' : 'Próximamente en todas las plataformas. Siempre libre.'}
+							{lang==='en' ? 'Coming soon on all platforms. Free forever.' : 'Próximamente en todas las plataformas. Siempre gratis.'}
 						</ServicesP>
 					</ServicesCard>
 					<ServicesCard>
 						<ServicesIcon src={Icon2}/>
 						<ServicesH2>
-							{lang==='en' ? 'Step Two: One-time set-up' : 'Paso dos: configuración única'}
+							{lang==='en' ? 'Step Two: One-time set-up' : 'Paso dos: configuración rápida'}
 						</ServicesH2>
 						<ServicesP>
 							{lang==='en' ? 'Create an account in less than one minute.' : 'Crea una cuenta en menos de un minuto.'}
@@ -36,10 +36,10 @@ const HowItWorks = () => {
 					<ServicesCard>
 						<ServicesIcon src={Icon3}/>
 						<ServicesH2>
-							{lang==='en' ? 'Step Three: Start Earning' : 'Paso tres: comience a ganar'}
+							{lang==='en' ? 'Step Three: Start Earning' : 'Paso tres: comience a ganar dinero'}
 						</ServicesH2>
 						<ServicesP>
-							{lang==='en' ? 'Link your credit/debit card to save automatically. Paying with cash? No worries: just scan the QR code available at check-out and get paid all the same.' : 'Vincula tu tarjeta de crédito/débito para guardar automáticamente. ¿Pagando en efectivo? No se preocupe: simplemente escanee el código QR disponible en el momento del pago y reciba el pago de todos modos.'}
+							{lang==='en' ? 'Link your credit/debit card to save automatically. Paying with cash? No worries: just scan the QR code available at check-out and get paid all the same.' : 'Vincula tu tarjeta de crédito/débito para guardar automáticamente. ¿Quiere pagar en efectivo? No se preocupe: simplemente escanee el código QR en el momento del pago y recíbalo de todos modos'}
 						</ServicesP>
 					</ServicesCard>
 					<ServicesCard>

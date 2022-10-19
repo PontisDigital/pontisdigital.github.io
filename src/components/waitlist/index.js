@@ -78,7 +78,7 @@ const {lang} = useContext(LanguageContext);
           setModalError(
 			  lang==='en'?
 			  "All fields are required. Unless they are marked optional":
-			  "Todos los campos son obligatorios. A menos que estén marcados como opcionales"
+			  "Todos los campos son obligatorios, a menos que estén marcados como opcionales. Cancelar."
           );
           setModal(3);
 		  }
@@ -178,7 +178,7 @@ const {lang} = useContext(LanguageContext);
 				<div className="waitlist-input">
 				  <p className="waitlist-input-text">
                   {
-                    lang==='en'?'Please enter your email':'Por favor introduzca su correo electrónico'
+                    lang==='en'?'Please enter your email':'Por favor, introduzca su correo electrónico'
                   }
                   </p>
 				  {emailStatus === 0 && (
@@ -208,7 +208,7 @@ const {lang} = useContext(LanguageContext);
 				</div>
             <input
               type="submit"
-				value={lang==='en'?'Register':'Inscribirse'}
+				value={lang==='en'?'Register':'Por favor, introduzca su correo electrónico'}
 				disable={
 					true
 				}

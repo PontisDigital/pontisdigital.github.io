@@ -27,7 +27,7 @@ const HeroSection = () => {
 
 					<div>
 						<HeroH1>
-							{lang==='en' ? 'Get Paid Every Time You Shop' : 'Cobra Cada vez que Compras'}
+							{lang==='en' ? 'Get Paid Every Time You Shop' : 'Cobra Cada vez que Compre'}
 						</HeroH1>
 						<HeroP>
 							{lang==='en' ? 'Money is added to your account every time you shop with rainyday. No catch: simply download the app, shop like you normally do, and watch your balance grow!'
@@ -45,7 +45,7 @@ const HeroSection = () => {
 								spy={true}
 								offset={-80}
 								>
-								{lang==='en' ? 'Join today' : 'Únete hoy'}
+								{lang==='en' ? 'Join today' : 'Únete ahora'}
 								{hoverStart ? <ArrowForward /> : <ArrowRight />}
 							</Button>
 						</HeroBtnWrapper>
