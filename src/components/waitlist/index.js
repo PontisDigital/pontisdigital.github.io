@@ -208,7 +208,7 @@ const {lang} = useContext(LanguageContext);
 				</div>
             <input
               type="submit"
-				value={lang==='en'?'Register':'Por favor, introduzca su correo electrónico'}
+				value={lang==='en'?'Register':'Únete ahora'}
 				disable={
 					true
 				}
