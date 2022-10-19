@@ -26,7 +26,7 @@ const Footer = () => {
 							</SocialLogo>
 							<WebsiteRights>
 								© Pontis Digital {lang==='en'?'Corporation':'Corporación'}. {new Date().getFullYear()+" "}
-								{lang==='en'?'All rights reserved.':'2022 todos los derechos reservados'}
+								{lang==='en'?'All rights reserved.':'todos los derechos reservados'}
 							</WebsiteRights>
 							<SocialIcons>
 								<SocialIconLink
