@@ -1,3 +1,5 @@
+import Accordion from "../components/accordion/accordion"
+import Footer from "../components/footer"
 import Navbar from "../components/navbar"
 
 const FaqPage = () => {
@@ -5,9 +7,8 @@ const FaqPage = () => {
 	return(
 		<>
 			<Navbar/>
-			<h1>
-				FAQ says "Hello There"
-			</h1>
+			<Accordion/>
+			<Footer/>
 		</>
 	)
 }
