@@ -65,6 +65,12 @@ export const ServicesIcon = styled.img`
 	width: 160px;
 	margin-bottom: 10px;
 `
+export const ServicesLearn = styled.button`
+	display: flex;
+	align-items: center;
+	text-align: center;
+	color: white;
+`
 
 export const ServicesH1 = styled.h1`
 	font-size: 2.5rem;

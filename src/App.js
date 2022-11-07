@@ -7,11 +7,11 @@ import Home from './pages'
 import SuperTokens, { SuperTokensWrapper, getSuperTokensRoutesForReactRouterDom} from "supertokens-auth-react";
 import ThirdPartyEmailPassword, {Github, Google, Facebook, Apple} from "supertokens-auth-react/recipe/thirdpartyemailpassword";
 import Session from "supertokens-auth-react/recipe/session";
-import * as reactRouterDom from "react-router-dom";
 import axios from "axios";
 
 import {LanguageProvider} from './LanguageContext';
 import LoginPage from './pages/login';
+import FaqPage from './pages/faq';
 
 function App() {
 SuperTokens.init({
@@ -70,6 +70,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                   <BrowserRouter basename="/">
                       <Routes>
                           <Route path="/" element={<Home/>}/>
+                          <Route path="/login" element={<LoginPage/>}/>
+                          <Route path="/faq" element={<FaqPage/>}/>
                       </Routes>
                   </BrowserRouter>
               </LanguageProvider>

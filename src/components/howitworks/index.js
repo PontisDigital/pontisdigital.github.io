@@ -3,9 +3,14 @@ import Icon2 from "../../images/setup.svg"
 import Icon3 from "../../images/earn.svg"
 import Icon4 from "../../images/shoppingOnline.svg"
 import { ServicesP, ServicesContainer, ServicesH1, ServicesWrapper, ServicesIcon, ServicesH2, ServicesCard } from "./servicesElements";
+import { Button, LinkButton } from "../buttonElement";
 
 import LanguageContext from '../../LanguageContext';
 import { useContext } from 'react';
+
+const GoToFAQ = () => {
+}
+
 const HowItWorks = () => {
 	const {lang} = useContext(LanguageContext);
 	return (
@@ -52,6 +57,9 @@ const HowItWorks = () => {
 						</ServicesP>
 					</ServicesCard>
 				</ServicesWrapper>
+				<LinkButton to='/faq' onClick={GoToFAQ}>
+					Click here to learn more
+				</LinkButton>
 			</ServicesContainer>
 		</>
 	)
