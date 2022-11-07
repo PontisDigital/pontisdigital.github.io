@@ -3,9 +3,12 @@ import {faqData} from './faqData'
 import { IconContext } from 'react-icons'
 import {FiPlus, FiMinus} from 'react-icons/fi'
 import {AccordionSection, Container, Wrap, Dropdown} from './accordionElements'
+import LanguageContext from '../../LanguageContext';
+import { useContext } from 'react';
 
 const Accordion = () =>
 {
+	const {lang} = useContext(LanguageContext);
 	const[clicked,setClicked] = useState(false)
 	const toggle = index => {
 		if(clicked === index)
@@ -23,13 +26,13 @@ const Accordion = () =>
 						return(
 							<>
 								<Wrap onClick={()=> toggle(index)} key={index}>
-									<h1>{item.question}</h1>
+									<h1>{lang === 'en' ? item.questionEng : item.questionEsp}</h1>
 									<span>{clicked === index ? <FiMinus/> : <FiPlus/>}</span>
 								</Wrap>
 								{
 									clicked === index ? (
 										<Dropdown>
-											<p>{item.answer}</p>
+											<p>{lang === 'en' ? item.answerEng : item.answerEsp}</p>
 										</Dropdown>
 									) : null
 								}
