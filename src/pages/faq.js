@@ -1,6 +1,6 @@
 import Accordion from "../components/accordion/accordion"
 import Footer from "../components/footer"
-import Navbar from "../components/navbar"
+import NavbarNonHome from "../components/navbar/nonHomeNavbar"
 import styled from 'styled-components'
 
 const Flex = styled.div`
@@ -14,7 +14,7 @@ const FaqPage = () => {
 	return(
 		<>
 			<Flex>
-				<Navbar/>
+				<NavbarNonHome/>
 				<Accordion/>
 				<Footer/>
 			</Flex>
