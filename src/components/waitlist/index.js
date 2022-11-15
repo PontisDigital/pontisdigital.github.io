@@ -56,24 +56,26 @@ const {lang} = useContext(LanguageContext);
     event.preventDefault();
 	let post = new Map();
 	post['email'] = email;
-    post['refUsed'] = (refCode === null) ? "" : refCode;
+    post['ref_code'] = (refCode === null) ? "" : refCode;
+    post['ip'] = "";
 	  const headers = {
 		  "Content-Type": "application/json",
 	  };
     console.log("Post req" + post);
     axios
-      .post("https://api.pontis.digital/waitlist", post, { headers })
+      .post("https://api.rainyday.deals/waitlist", post, { headers })
       .then(function (response) {
+        const data = JSON.parse(response.data);
         // REFERRAL GENERATED COMES HERE
 			console.log("Response: " + response.data);
-		if(response.data.length === 9)
+		if(data.ref_code.length === 9)
 		{
 			console.log("Response: " + response.data);
 			setCode(response.data);
 			setModal(2);
 		}
 
-		  if (response.data === "MISSING_INFO")
+		  if (data.ref_code === "MISSING_INFO")
 		  {
           setModalError(
 			  lang==='en'?
@@ -82,35 +84,35 @@ const {lang} = useContext(LanguageContext);
           );
           setModal(3);
 		  }
-		  else if (response.data === "PHONE_EXISTS") {
+		  else if (data.ref_code === "PHONE_EXISTS") {
           setModalError(
 			  lang==='en'?
 			  "You're already signed up for the waitlist using this phone number!":
 			  "¡Ya estás inscrito en la lista de espera con este número de teléfono!"
           );
           setModal(3);
-        } else if (response.data === "WAITLIST_SUCCESS") {
+        } else if (data.ref_code === "WAITLIST_SUCCESS") {
           setModalError(
 			  lang==='en'?
 			  "Thanks for signing up! You'll receive an email soon with more information!":
 			  "Gracias por registrarte! ¡Pronto recibirás un correo electrónico con más información!"
           );
           setModal(3);
-        } else if (response.data === "INVALID_REFERRAL_USED") {
+        } else if (data.ref_code === "INVALID_REFERRAL_USED") {
           setModalError(
 			  lang==='en'?
 			  "Invalid Referral Code":
 			  "código de referencia no válido"
           );
           setModal(3);
-        } else if (response.data === "EMAIL_EXISTS") {
+        } else if (data.ref_code === "EMAIL_EXISTS") {
           setModalError(
 			  lang==='en'?
 			  "You've already registered with this email":
 			  "Ya te has registrado con este correo electrónico"
           );
           setModal(3);
-        } else if (response.data === "PHONE_INVALID") {
+        } else if (data.ref_code === "PHONE_INVALID") {
           setModalError(
 			  lang==='en'?
 			  "Please enter a valid phone number":
