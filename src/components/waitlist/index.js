@@ -58,7 +58,7 @@ const {lang} = useContext(LanguageContext);
 		  "Content-Type": "application/json",
 	  };
     axios
-	  .post("https://api.rainyday.deals/waitlist", post, { headers })
+      .post("https://api.rainyday.deals/waitlist", post, { headers })
       .then(function (response) {
         // REFERRAL GENERATED COMES HERE
 		if(response.data.ref_code.length === 9)
@@ -179,7 +179,6 @@ const {lang} = useContext(LanguageContext);
 					</p>
 				  )}
 				  <input
-					value=""
 					type="email"
 					placeholder="johndoe@gmail.com"
 					onInput={handleEmailChange}
