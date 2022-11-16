@@ -23,7 +23,7 @@ const InfoSection = ({id,lightBg,imgStart,topLine,heading,lightText,darkText,des
 										smooth={true}
 										duration={500}
 										spy={true}
-										exact={true}
+										exact={"true"}
 										offset={-80}
 									>
 										{buttonLabel}

@@ -31,9 +31,7 @@ const {lang} = useContext(LanguageContext);
 
   //stores the error messages for each form field
   const handleEmailChange = (event) => {
-    console.log(event.target.value);
     setEmail(event.target.value);
-    console.log("Length", event.target.value.length);
 	  if(event.target.value.includes("@") && event.target.value.includes(".") && event.target.value.length > 0)
 	  {
 		  setEmailStatus(1);
@@ -51,8 +49,6 @@ const {lang} = useContext(LanguageContext);
   const submitButtonPressed = (event) => {
     setModal(1);
 
-    console.log("button pressed");
-    console.log("refCode: " + refCode);
     event.preventDefault();
 	let post = new Map();
 	post['email'] = email;
@@ -61,21 +57,17 @@ const {lang} = useContext(LanguageContext);
 	  const headers = {
 		  "Content-Type": "application/json",
 	  };
-    console.log("Post req" + post);
     axios
-      .post("https://api.rainyday.deals/waitlist", post, { headers })
+	  .post("https://api.rainyday.deals/waitlist", post, { headers })
       .then(function (response) {
-        const data = JSON.parse(response.data);
         // REFERRAL GENERATED COMES HERE
-			console.log("Response: " + response.data);
-		if(data.ref_code.length === 9)
+		if(response.data.ref_code.length === 9)
 		{
-			console.log("Response: " + response.data);
-			setCode(response.data);
+			setCode(response.data.ref_code);
 			setModal(2);
 		}
 
-		  if (data.ref_code === "MISSING_INFO")
+		  if (response.data.ref_code === "MISSING_INFO")
 		  {
           setModalError(
 			  lang==='en'?
@@ -84,35 +76,35 @@ const {lang} = useContext(LanguageContext);
           );
           setModal(3);
 		  }
-		  else if (data.ref_code === "PHONE_EXISTS") {
+		  else if (response.data.ref_code === "PHONE_EXISTS") {
           setModalError(
 			  lang==='en'?
 			  "You're already signed up for the waitlist using this phone number!":
 			  "¡Ya estás inscrito en la lista de espera con este número de teléfono!"
           );
           setModal(3);
-        } else if (data.ref_code === "WAITLIST_SUCCESS") {
+        } else if (response.data.ref_code === "WAITLIST_SUCCESS") {
           setModalError(
 			  lang==='en'?
 			  "Thanks for signing up! You'll receive an email soon with more information!":
 			  "Gracias por registrarte! ¡Pronto recibirás un correo electrónico con más información!"
           );
           setModal(3);
-        } else if (data.ref_code === "INVALID_REFERRAL_USED") {
+        } else if (response.data.ref_code === "INVALID_REFERRAL_USED") {
           setModalError(
 			  lang==='en'?
 			  "Invalid Referral Code":
 			  "código de referencia no válido"
           );
           setModal(3);
-        } else if (data.ref_code === "EMAIL_EXISTS") {
+        } else if (response.data.ref_code === "EMAIL_EXISTS") {
           setModalError(
 			  lang==='en'?
 			  "You've already registered with this email":
 			  "Ya te has registrado con este correo electrónico"
           );
           setModal(3);
-        } else if (data.ref_code === "PHONE_INVALID") {
+        } else if (response.data.ref_code === "PHONE_INVALID") {
           setModalError(
 			  lang==='en'?
 			  "Please enter a valid phone number":
@@ -122,8 +114,6 @@ const {lang} = useContext(LanguageContext);
 
       }})
       .catch(function (error) {
-        console.log(error.response.data);
-        console.log(error.response);
         if (error.response.data === "PHONE_EXISTS") {
           setModalError(
 			  lang==='en'?
@@ -189,6 +179,7 @@ const {lang} = useContext(LanguageContext);
 					</p>
 				  )}
 				  <input
+					value=""
 					type="email"
 					placeholder="johndoe@gmail.com"
 					onInput={handleEmailChange}
@@ -212,7 +203,7 @@ const {lang} = useContext(LanguageContext);
               type="submit"
 				value={lang==='en'?'Register':'Únete ahora'}
 				disable={
-					true
+					"true"
 				}
             />
           </form>
