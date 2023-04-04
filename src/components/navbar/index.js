@@ -1,12 +1,14 @@
 import {FaBars} from 'react-icons/fa'
 import {
-	Nav,NavbarContainer,NavLogo,MobileIcon,NavMenu,NavItem,NavLinks,NavButton,NavButtonLink,NavButtonMobile
+	Nav,NavImg,NavbarContainer,NavLogo,MobileIcon,NavMenu,NavItem,NavLinks,NavButton,NavButtonLink,NavButtonMobile
 } from './navbarElements'
 import { useEffect, useState } from 'react';
 import {animateScroll as scroll} from 'react-scroll'
 import LanguageContext from '../../LanguageContext';
 import { useContext } from 'react';
 import {MobileOnlyButton} from '../buttonElement'
+
+import Logo from '../../images/logo.png'
 
 const Navbar = ({toggle}) => {
 	const[scrollNav, setScrollNav] = useState(false)
@@ -40,6 +42,7 @@ const Navbar = ({toggle}) => {
 		<>
 			<Nav scrollNav={scrollNav}>
 				<NavbarContainer>
+					<NavImg src={Logo} onClick={toggleHome} to='/'/>
 					<NavLogo to='/' onClick={toggleHome}>rainyday</NavLogo>
 					<MobileIcon onClick={toggle}>
 						<FaBars/>

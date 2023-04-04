@@ -30,6 +30,26 @@ export const NavbarContainer = styled.div`
 	max-width: 1100px;
 `
 
+export const NavImg = styled.img`
+	padding: 10px;
+	max-width: 50%;
+	hegiht: auto;
+	z-index: -2;
+	justify-self: flex-start;
+	display: flex;
+	cursor: pointer;
+
+	@media screen and (max-width: 1066px)
+	{
+		display: none;
+		max-width: 100%;
+		position: absolute;
+		top: -200px;
+		left: -45px;
+	}
+
+`
+
 export const NavLogo = styled(LinkRouter)`
 	color: #fff;
 	justify-self: flex-start;
