@@ -6,7 +6,7 @@ export const ServicesContainer = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background: #4483AE;
+	background: #212e51;
 	@media screen and (max-width: 768px)
 	{
 		height: 1500px;
@@ -68,7 +68,7 @@ export const ServicesIcon = styled.img`
 
 export const ServicesH1 = styled.h1`
 	font-size: 2.5rem;
-	color: #2f2e41;
+	color: #fff;
 	margin-bottom: 64px;
 	text-align: center;
 

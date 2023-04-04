@@ -57,9 +57,6 @@ const HowItWorks = () => {
 						</ServicesP>
 					</ServicesCard>
 				</ServicesWrapper>
-				<LinkButton to='/faq' onClick={GoToFAQ}>
-					{lang === 'en' ? 'Click here to learn more' : 'Haga clic aquí para saber más'}
-				</LinkButton>
 			</ServicesContainer>
 		</>
 	)
