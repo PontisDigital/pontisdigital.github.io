@@ -154,7 +154,7 @@ export const NavButton = styled.nav`
 
 export const NavButtonLink = styled.button`
 	border-radius: 50px;
-	background: #061c58;
+	background: #4b39ef;
 	white-space: nowrap;
 	padding: 10px 22px;
 	color: #fff;
@@ -168,7 +168,7 @@ export const NavButtonLink = styled.button`
 	&:hover
 	{
 		transition: all 0.2s ease-in-out;
-		background: #6a779b;
-		color: #010606;
+		background: #212e51;
+		color: #fff;
 	}
 `
