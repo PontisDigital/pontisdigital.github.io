@@ -60,7 +60,7 @@ export const spanishSlide2 =
 	lightTextDesc: false,
 	topLine: 'Acceso sin límites',
 	heading: 'Gaste su dinero donde quiera, como quiera',
-	description: 'Puede dejar crecer su saldo, transferir ganancias a otras plataformas, como ATH Móvil o una cuenta bancaria, o pagar directamente con nuestra tarjeta de débito virtual gratuita. ¡La decisión es suya!',
+	description: 'Puede dejar crecer su saldo, transferir ganancias a otras plataformas, como ATH Móvil o una cuenta bancaria. También tiene la opción de pagar directamente con nuestra tarjeta de débito virtual gratuita. ¡La decisión es suya!',
 	buttonLabel: 'Empezar',
 	imgStart: false,
 	img: require('../../images/newStores.png'),
