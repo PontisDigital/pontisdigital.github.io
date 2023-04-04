@@ -5,7 +5,7 @@ import {Link as LinkRouter} from 'react-router-dom'
 export const Button = styled(Link)`
 	border-radius: 50px;
 	//background: #061c58;
-	background: ${({primary})=>(primary?'#061c58':'#2f2e41')};
+	background: ${({primary})=>(primary?'#1f1671':'#2f2e41')};
 	white-space: nowrap;
 	padding: ${({big})=>(big ? '14px 48px' : '12px 30px')};
 	color: #fff;

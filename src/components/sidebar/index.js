@@ -24,9 +24,6 @@ const Sidebar = ({isOpen, toggle}) => {
 					<SidebarLink to="nutshell" onClick={toggle}>
 					{lang==='en' ? 'In a Nutshell' : 'En una Palabra'}
 					</SidebarLink>
-					<SidebarLink to="waitlist" onClick={toggle}>
-					{lang==='en' ? 'Sign Up' : 'Inscribirse'}
-					</SidebarLink>
 				</SidebarMenu>
 				<SideButtonWrap>
 					<SidebarRoute to="waitlist" onClick={toggle}>

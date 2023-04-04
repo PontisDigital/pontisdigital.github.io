@@ -35,20 +35,6 @@ const HeroSection = () => {
 
 							}
 						</HeroP>
-						<HeroBtnWrapper>
-							<Button to="waitlist"
-								onMouseEnter={onHoverStart} onMouseLeave={onHoverStart}
-								primary='true'
-								dark='true'
-								smooth={true}
-								duration={500}
-								spy={true}
-								offset={-80}
-								>
-								{lang==='en' ? 'Join today' : 'Únete ahora'}
-								{hoverStart ? <ArrowForward /> : <ArrowRight />}
-							</Button>
-						</HeroBtnWrapper>
 					</div>
 						<HeroImage src={lang==='en' ? PhoneEnglish : PhoneSpanish}/>
 				</HeroContent>

@@ -89,17 +89,6 @@ const Navbar = ({toggle}) => {
 								{lang==='en' ? 'In a Nutshell' : 'En una Palabra'}
 							</NavLinks>
 						</NavItem>
-						<NavItem>
-							<NavLinks to="waitlist"
-								smooth={true}
-								duration={500}
-								spy={true}
-								exact='true'
-								offset={-150}
-							>
-							{lang==='en' ? 'Sign Up' : 'Inscribirse'}
-							</NavLinks>
-						</NavItem>
 					</NavMenu>
 					<NavButton>
 						<NavButtonLink 

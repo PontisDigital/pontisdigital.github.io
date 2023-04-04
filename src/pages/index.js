@@ -29,7 +29,6 @@ const Home = () => {
 			<InfoSection {...lang==='en' ? englishSlide1 : spanishSlide1}/>
 			<InfoSection {...lang==='en' ? englishSlide2 : spanishSlide2}/>
 			<Services/>
-			<Waitlist/>
 			<Footer/>
 		</>
 	)

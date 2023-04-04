@@ -17,18 +17,6 @@ const InfoSection = ({id,lightBg,imgStart,topLine,heading,lightText,darkText,des
 								<Subtitle darkText={darkText}>
 									{description}
 								</Subtitle>
-								<ButtonWrap>
-									<Button to="waitlist" primary={primary}
-										dark={dark}
-										smooth={true}
-										duration={500}
-										spy={true}
-										exact={"true"}
-										offset={-80}
-									>
-										{buttonLabel}
-									</Button>
-								</ButtonWrap>
 							</TextWrapper>
 						</Column1>
 						<Column2>
