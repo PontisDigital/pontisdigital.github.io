@@ -2,7 +2,7 @@ import {
 	FooterContainer, FooterWrap, FooterLinksContainer, FooterLinkItems, FooterLinkTitle, FooterLink, FooterLinksWrapper,
 	SocialMedia,SocialMediaWrap,SocialLogo,WebsiteRights,SocialIcons,SocialIconLink
 } from "./footerElements"
-import {FaFacebook, FaInstagram, FaTwitter, FaLinkedin} from 'react-icons/fa'
+import {FaFacebook, FaInstagram} from 'react-icons/fa'
 import {animateScroll as scroll} from 'react-scroll'
 
 import LanguageContext from '../../LanguageContext';
