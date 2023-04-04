@@ -6,7 +6,6 @@ import InfoSection from '../components/infoSection';
 import {englishSlide1,englishSlide2,spanishSlide1,spanishSlide2} from '../components/infoSection/Data';
 import Services from '../components/services';
 import Footer from '../components/footer';
-import Waitlist from '../components/waitlist';
 import HowItWorks from '../components/howitworks'
 
 import LanguageContext from '../LanguageContext';
