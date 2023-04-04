@@ -20,8 +20,8 @@ export const HeroBg = styled.div`
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-	background: rgb(2,0,36);
-	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(6,28,88,1) 50%, rgba(0,189,255,1) 100%);
+	background: rgb(75,57,239);
+	background: linear-gradient(90deg, rgba(75,57,239,1) 0%, rgba(75,57,239,1) 37%, rgba(255,255,255,1) 100%);
 	z-index: -5;
 `
 export const VideoBg = styled.video`
