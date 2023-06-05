@@ -64,6 +64,7 @@ color: ${({lightBg})=>(lightBg ? '#fff':'#6a779b')};
 	letter-spacing: 1.4px;
 	text-transform: uppercase;
 	margin-bottom: 16px;
+
 `
 
 export const Heading = styled.h1`
@@ -77,6 +78,7 @@ export const Heading = styled.h1`
 	{
 		font-size: 32px;
 	}
+
 `
 
 export const Subtitle = styled.p`
@@ -105,8 +107,18 @@ export const Img = styled.img`
 	width: 100%;
 	margin: 0 0 10px 0;
 	padding-right: 0;
+
+	@media screen and (max-width: 1066px)
+	{
+		display: none;
+		position: relative;
+		right: 35px;
+		width: 100%;
+	}
+
 	@media screen and (max-width: 480px)
 	{
+		display: none;
 		position: relative;
 		right: 35px;
 		width: 100%;

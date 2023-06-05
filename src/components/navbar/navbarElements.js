@@ -39,15 +39,6 @@ export const NavImg = styled.img`
 	display: flex;
 	cursor: pointer;
 
-	@media screen and (max-width: 1066px)
-	{
-		display: none;
-		max-width: 100%;
-		position: absolute;
-		top: -200px;
-		left: -45px;
-	}
-
 `
 
 export const NavLogo = styled(LinkRouter)`
@@ -60,6 +51,24 @@ export const NavLogo = styled(LinkRouter)`
 	font-weight: bold;
 	text-decoration: none;
 	letter-spacing: 10px;
+
+	@media screen and (max-width: 1066px)
+	{
+		max-width: 100%;
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, 50%);
+	}
+
+	@media screen and (max-width: 768px)
+	{
+		display: none;
+		max-width: 100%;
+		position: absolute;
+		top: -200px;
+		left: -45px;
+	}
+
 `
 
 export const MobileIcon = styled.div`
