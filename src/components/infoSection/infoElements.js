@@ -108,20 +108,13 @@ export const Img = styled.img`
 	margin: 0 0 10px 0;
 	padding-right: 0;
 
-	@media screen and (max-width: 1066px)
+	@media screen and (max-width: 768px)
 	{
-		display: none;
 		position: relative;
-		right: 35px;
-		width: 100%;
-	}
-
-	@media screen and (max-width: 480px)
-	{
-		display: none;
-		position: relative;
-		right: 35px;
-		width: 100%;
+		top: -75px;
+		left: 25%;
+		right: -25%;
+		width: 60%;
 	}
 `
 
