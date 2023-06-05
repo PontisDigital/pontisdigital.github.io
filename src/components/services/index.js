@@ -5,6 +5,7 @@ import { ServicesP, ServicesContainer, ServicesH1, ServicesWrapper, ServicesIcon
 
 import LanguageContext from '../../LanguageContext';
 import { useContext } from 'react';
+
 const Services = () => {
 	const {lang} = useContext(LanguageContext);
 	return (

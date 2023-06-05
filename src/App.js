@@ -7,6 +7,7 @@ import {LanguageProvider} from './LanguageContext';
 import LoginPage from './pages/login';
 import FaqPage from './pages/faq';
 import PrivacyPage from './pages/privacy';
+import SupportPage from './pages/support';
 
 function App() {
     return(
@@ -16,6 +17,7 @@ function App() {
                           <Route path="/" element={<Home/>}/>
                           <Route path="/login" element={<LoginPage/>}/>
                           <Route path="/faq" element={<FaqPage/>}/>
+                          <Route path="/support" element={<SupportPage/>}/>
 						  <Route path="/privacy-policy" element={<PrivacyPage/>}/>
                       </Routes>
                   </BrowserRouter>
