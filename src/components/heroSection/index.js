@@ -3,8 +3,8 @@ import {
 	HeroContainer, HeroFlex, HeroBg, HeroImage, HeroContent,HeroH1,HeroP,HeroBtnWrapper,ArrowForward,ArrowRight, BlackShade
 } from './heroElements'
 import {Button,MobileOnlyButton} from '../buttonElement'
-import PhoneSpanish from '../../images/newDash.png'
-import PhoneEnglish from '../../images/newDashEng.png'
+import PhoneSpanish from '../../images/merchantHomeES.png'
+import PhoneEnglish from '../../images/merchantHome.png'
 
 import LanguageContext from '../../LanguageContext';
 import { useContext } from 'react';
