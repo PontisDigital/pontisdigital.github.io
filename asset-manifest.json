@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.aef9076e.css",
-    "main.js": "/static/js/main.cc871ec7.js",
+    "main.js": "/static/js/main.18eb48fe.js",
     "static/media/newDiscoveryEng.png": "/static/media/newDiscoveryEng.bb41523ba09edd02cdca.png",
     "static/media/newDashEng.png": "/static/media/newDashEng.b46fbae0a1bc6a014842.png",
     "static/media/newStores.png": "/static/media/newStores.1c6820b1d4f5c7836915.png",
@@ -17,10 +17,10 @@
     "static/media/download.svg": "/static/media/download.72d4d019a491583f9aae5f0905c8e39d.svg",
     "index.html": "/index.html",
     "main.aef9076e.css.map": "/static/css/main.aef9076e.css.map",
-    "main.cc871ec7.js.map": "/static/js/main.cc871ec7.js.map"
+    "main.18eb48fe.js.map": "/static/js/main.18eb48fe.js.map"
   },
   "entrypoints": [
     "static/css/main.aef9076e.css",
-    "static/js/main.cc871ec7.js"
+    "static/js/main.18eb48fe.js"
   ]
 }
