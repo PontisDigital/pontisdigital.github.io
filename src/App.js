@@ -8,6 +8,7 @@ import LoginPage from './pages/login';
 import FaqPage from './pages/faq';
 import PrivacyPage from './pages/privacy';
 import SupportPage from './pages/support';
+import MerchantPage from './pages/merchant';
 
 function App() {
     return(
@@ -19,6 +20,7 @@ function App() {
                           <Route path="/faq" element={<FaqPage/>}/>
                           <Route path="/support" element={<SupportPage/>}/>
 						  <Route path="/privacy-policy" element={<PrivacyPage/>}/>
+						  <Route path="/solution" element={<MerchantPage/>}/>
                       </Routes>
                   </BrowserRouter>
               </LanguageProvider>
